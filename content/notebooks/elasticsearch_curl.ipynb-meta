@@ -1,0 +1,8 @@
+Title: Basic search with Elasticsearch
+Date: 2017-03-14 11:41
+Modified: 2017-03-14 14:35
+Category: posts
+Tags: notebook, elasticsearch, Python, Jupyter
+Slug: basic-search-with-elasticsearch
+Authors: Jitse-Jan
+Summary: Inspired by this [tutorial](https://qbox.io/blog/building-an-elasticsearch-index-with-python) I tried to continue investigating [Elasticsearch](https://www.elastic.co/products/elasticsearch) since I would like to use a fast indexing tool for the data I am gathering and the applications I am developing.

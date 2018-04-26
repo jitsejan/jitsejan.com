@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pelican:
+    image: jitsejan/pelican-python3
+    command: fab reserve
+    volumes:
+      - .:/code
+    ports:
+      - "8093:8093"
+

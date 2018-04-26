@@ -1,0 +1,8 @@
+Title: Mocking in unittests in Python
+Date: 2017-01-30 15:41
+Modified: 2017-03-28 18:05
+Category: posts
+Tags: notebook, unittest, Python, Jupyter, mock
+Slug: 
+Authors: Jitse-Jan
+Summary: In my previous [post](http://pelican.jitsejan.com/unittesting-in-jupyter-notebook.html) on testing in Python I explained how to test in a Jupyter Notebook. Now a few weeks later I need to get familiar with mocking in Python. Since this is a new concept for me I made a small notebook testing different functionalities of the mocking library.

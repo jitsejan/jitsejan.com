@@ -1,0 +1,8 @@
+Title: Using the Ethereum Web3 client in Python
+Date: 2017-05-05 14:21
+Modified: 2017-05-05 14:21
+Category: posts
+Tags: notebook, Python, Jupyter, blockchain, Ethereum, ether, web3
+Slug: using-ethereum-web3-client-python
+Authors: Jitse-Jan
+Summary: Similar to the RPC client, I will use the web3 API to make a transaction on my private blockchain. I will probably move to develop in Javascript where web3 is the essential library to use for interacting with the blockchain. This way I can get familiar with its functionality.

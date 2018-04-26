@@ -1,0 +1,8 @@
+Title: Using Scrapy in Jupyter notebook
+Date: 2017-08-02 15:23
+Modified: 2017-08-02 15:23
+Category: posts
+Tags: notebook, Python, Jupyter, Scrapy, crawling
+Slug: using-scrapy-in-jupyter-notebook
+Authors: Jitse-Jan
+Summary: This notebook makes use of the Scrapy library to scrape data from a website. Following the basic example, we create a QuotesSpider and call the CrawlerProcess with this spider to retrieve quotes from http://quotes.toscrape.com.

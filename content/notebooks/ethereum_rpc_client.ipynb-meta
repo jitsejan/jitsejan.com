@@ -1,0 +1,8 @@
+Title: Using the Ethereum RPC client in Python
+Date: 2017-05-03 13:25
+Modified: 2017-05-03 13:25
+Category: posts
+Tags: notebook, Python, Jupyter, blockchain, Ethereum, ether, rpc
+Slug: using-ethereum-rpc-client-python
+Authors: Jitse-Jan
+Summary: In this notebook I will try out the RPC client of Ethereum using Python. See [JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) for more information on JSON RPC.

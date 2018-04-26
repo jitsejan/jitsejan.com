@@ -1,0 +1,8 @@
+Title: MongoDB - First try
+Date: 2017-04-05 16:58
+Modified: 2017-04-05 13:58
+Category: posts
+Tags: notebook, mongoDB, pymongo, Python, Jupyter, database
+Slug: mongodb_first_try
+Authors: Jitse-Jan
+Summary: My first experience with [MongoDB](https://www.mongodb.com/mongodb-3.4). I will install MongoDB and Pymongo, insert some data and query it. Next step will be to tryout [monary](https://bitbucket.org/djcbeach/monary/wiki/Home), but for this notebook it is out of scope.

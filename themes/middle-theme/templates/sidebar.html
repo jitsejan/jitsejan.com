@@ -1,0 +1,65 @@
+<aside class="page-sidebar">
+    {% if ABOUT %}
+    <nav class="widget" id="sidebar-about">
+        {% if ABOUT_IMG %}
+        <div class="row img-div">
+            <img src="{{ ABOUT_IMG }}" />
+        </div>
+        {% endif %}
+        <div class="row">
+        {{ ABOUT }}
+        </div>  
+    </nav>
+    <hr/>
+    {% endif %}
+    {% if tags %}
+    <nav class="widget">
+        <ul class="tagcloud">
+        {% for tag in tag_cloud %}
+        <li class="tag-{{ tag.1 }}">
+            <a href="{{ SITEURL }}/{{ tag.0.url }}">
+            {{ tag.0 }}
+                {% if TAG_CLOUD_BADGE %}
+                    <span class="badge">{{ tag.2 }}</span>
+                {% endif %}
+            </a>
+        </li>
+        {% endfor %}
+        </ul>
+    </nav>
+    <hr/>
+    {% endif %}
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="social-list">
+                {% if FACEBOOK_USERNAME %}
+                    <li><a href="http://www.facebook.com/{{ FACEBOOK_USERNAME }}" title="Facebook" rel="me" target="new"><i class="fa fa-1x fa-facebook"></i></a></li>
+                {% endif %}
+                {% if FLICKR_USERNAME %}
+                    <li><a href="http://www.flickr.com/photos/{{ FLICKR_USERNAME }}" title="Flickr" rel="me" target="new"><i class="fa fa-1x fa-flickr"></i></a></li>
+                {% endif %}
+                {% if SPOTIFY_USERNAME %}
+                    <li><a href="https://play.spotify.com/user/{{ SPOTIFY_USERNAME }}" title="Spotify" rel="me" target="new"><i class="fa fa-1x fa-spotify"></i></a></li>
+                {% endif %}
+                {% if LINKEDIN_USERNAME %}
+                    <li><a href="https://www.linkedin.com/in/{{ LINKEDIN_USERNAME }}" title="LinkedIn" rel="me" target="new"><i class="fa fa-1x fa-linkedin"></i></a></li>
+                {% endif %}
+                {% if TWITTER_USERNAME %}
+                    <li><a href="http://twitter.com/{{ TWITTER_USERNAME }}" title="Twitter" rel="me" target="new"><i class="fa fa-1x fa-twitter"></i></a></li>
+                {% endif %}
+                {% if GITHUB_USERNAME %}
+                    <li><a href="http://www.github.com/{{ GITHUB_USERNAME }}" title="Github" rel="me" target="new"><i class="fa fa-1x fa-github"></i></a></li>
+                {% endif %}
+                {% if BITBUCKET_USERNAME %}
+                    <li><a href="http://bitbucket.org/{{ BITBUCKET_USERNAME }}" title="Bitbucket" rel="me" target="new"><i class="fa fa-1x fa-bitbucket"></i></a></li>
+                {% endif %}
+                {% if BLOCKS_USERNAME %}
+                    <li><a href="http://bl.ocks.org/{{ BLOCKS_USERNAME }}" title="Blocks.org" rel="me" target="new"><i class="fa fa-1x fa-bar-chart"></i></a></li>
+                {% endif %}
+                {% if DOCKER_USERNAME %}
+                    <li><a href="https://hub.docker.com/r/{{ DOCKER_USERNAME }}" title="Docker" rel="me" target="new"><i class="fa fa-1x fa-docker"></i></a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</aside>

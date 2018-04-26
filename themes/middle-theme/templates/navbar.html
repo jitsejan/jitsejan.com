@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default bs-docs-nav main-header" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <img src="/theme/images/Pipe_up.gif"/>
+            </button>
+            <a class="navbar-brand" href="/" title="Home" class="title">JJ's World</a></li>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+            {% for p in PAGES %}
+                <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </div><!-- .navbar-collapse -->
+    </div><!-- .container -->
+</nav>
