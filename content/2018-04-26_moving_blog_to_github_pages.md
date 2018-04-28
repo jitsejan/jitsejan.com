@@ -148,7 +148,7 @@ pelican /home/jitsejan/code/pelican-source/content -o /home/jitsejan/code/pelica
 Done: Processed 1 article, 0 drafts, 0 pages and 0 hidden pages in 0.14 seconds.
 ```
 
-Push the output code to the `pelican-html` repository:
+Push the output code to the `jitsejan.github.io` repository:
 
 ```bash
 jitsejan@dev16:~/code/jitsejan.github.io-source$ cd output/
@@ -157,7 +157,7 @@ jitsejan@dev16:~/code/jitsejan.github.io-source/output$ git commit -m 'My first 
 jitsejan@dev16:~/code/jitsejan.github.io-source/output$ git push -u origin master
 ```
 
-Push the source code to the `pelican-source` repository:
+Push the source code to the `jitsejan.github.io-source` repository:
 
 ```bash
 jitsejan@dev16:~/code/jitsejan.github.io-source/output$ cd ..
@@ -212,3 +212,4 @@ To make the Github URL work with my own domain, I had to follow several steps:
 2. Update the DNS record for my DreamHost account and modify the two primary nameservers to point to [Cloudflare](https://www.cloudflare.com) and remove the additional ones. (Nameserver 1: janet.ns.cloudflare.com, Nameserver 2: marty.ns.cloudflare.com)
 3. Add DNS records in Cloudflare. One CNAME for `www` and one CNAME for `jitsejan.com` to point to `jitsejan.github.io`.
 
+Done. No more server needed for hosting a blog!
