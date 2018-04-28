@@ -14,7 +14,7 @@ Since I am evaluating the use of the different servers that I own, I am trying t
 ### Create two repositories
 [https://github.com/new](https://github.com/new)
 
-* [jitsejan/pelican-source](https://github.com/jitsejan/jitsejan.github.io-source) (This repository contains source for the Pelican blog for my homepage)
+* [jitsejan/jitsejan.github.io-source](https://github.com/jitsejan/jitsejan.github.io-source) (This repository contains source for the Pelican blog for my homepage)
 * [jitsejan/jitsejan.github.io](https://github.com/jitsejan/jitsejan.github.io) (This repository contains the Pelican blog for my homepage)
 
 ### Set up the Pelican blog
