@@ -1,6 +1,6 @@
 Title: Creating prediction model as a service using Flask and Docker
 Date: 2018-05-09 18:07
-Modified: 2018-05-09 18:07
+Modified: 2018-05-10 10:07
 Category: posts
 Tags: notebook, Python, Jupyter, machine learning, classifier, API, model as a service, Flask
 Slug: creating-model-as-a-service
