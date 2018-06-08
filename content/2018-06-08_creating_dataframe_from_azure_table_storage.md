@@ -11,7 +11,8 @@ Summary:
 import pandas as pd
 from azure.cosmosdb.table.tableservice import TableService
 
-CONNECTION_STRING = "DUMMYDUMMY"
+CONNECTION_STRING = "DUMMYSTRING"
+SOURCE_TABLE = "DUMMYTABLE"
 
 def set_table_service():
     """ Set the Azure Table Storage service """
@@ -25,11 +26,11 @@ def get_dataframe_from_table_storage_table(table_service, filter_query):
 def get_data_from_table_storage_table(table_service, filter_query):
     """ Retrieve data from Table Storage """
     for record in table_service.query_entities(
-        source_table, filter=filter_query
+        SOURCE_TABLE, filter=filter_query
     ):
         yield record
 
-fq = "PartiitionKey eq '12345'
+fq = "PartiitionKey eq '12345'"
 ts = set_table_service()
 df = get_data_dataframe_from_table_storage_table(table_service=ts,
                                                  filter_query=fq)
