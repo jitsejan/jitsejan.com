@@ -1,0 +1,8 @@
+Title: Using ButterCMS in a Jupyter notebook with VueJS
+Date: 2018-06-14 16:07
+Modified: 2018-06-14 16:07
+Category: posts
+Tags: notebook, Python, Jupyter, VueJS, ButterCMS, javascript
+Slug: using-buttermcs-in-jupyter
+Authors: Jitse-Jan
+Summary: The goal of this notebook is to get myself familiar with ButterCMS, a headless CMS that can be easily integrated with any platform in any language. In the past I've experienced with Joomla, Drupal and WordPress (and Blogger long time ago), where I have lost invested a lot of time in simply getting the CMS in place, extending the CMS with more functionality and migrating data between servers. Since I am investigating different ways of using microservices, becoming less platform dependent and overall learning new tools, I use this notebook to show a simple example of ButterCMS in Jupyter.
