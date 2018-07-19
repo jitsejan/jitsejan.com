@@ -10,3 +10,8 @@ I choose Pelican because I was looking for a static web framework with support f
 * Tag-cloud
 * Custom display of pages in navbar
 * Social icons for Twitter, Facebook, Linkedin, Flickr, Github, Bitbucket, Blocks and Spotify
+
+## Remember
+* `pip install -r requirements.txt` to install Pelican and other dependencies
+* `npm install less` after installing node for the `less` compiler
+* `git clone https://github.com/danielfrg/pelican-ipynb` to plugin folder
