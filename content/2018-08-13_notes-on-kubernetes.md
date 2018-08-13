@@ -9,6 +9,7 @@ Summary: After numerous restarts and resets of my VPS and executing over 20 diff
 
 ## TLDR:
 Final solution:
+
 * `docker`
 * `kubeadm`
 * `kubectl`
@@ -20,6 +21,7 @@ Final solution:
 
 ## Sources
 Some of the sources I have used to get my Kubernetes cluster up and running:
+
 * [Kubernetes in 10 minutes](https://blog.alexellis.io/kubernetes-in-10-minutes/)
 * [Your instant Kubernetes cluster](https://blog.alexellis.io/your-instant-kubernetes-cluster/)
 * [Setting up a single node Kubernetes Cluster](https://ninetaillabs.com/setting-up-a-single-node-kubernetes-cluster/)
@@ -43,7 +45,7 @@ Docker version 17.03.2-ce, build f5ec1e2
 ```
 ### Install Kubernetes apt repository
 
-<center><img src="http://files.jitsejan.com/logos/kubernetes.PNG" width=200/></center>
+<center><img src="http://files.jitsejan.com/logos/kubernetes.svg" width=200/></center>
 
 ```bash
 jitsejan@dev16:~$ sudo apt-get install -y apt-transport-https && curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
@@ -272,7 +274,7 @@ NOTES:
 
 ## Traefik
 
-<center><img src="http://files.jitsejan.com/logos/traefik.JPG" width=200/></center>
+<center><img src="http://files.jitsejan.com/logos/traefik.PNG" width=200/></center>
 
 
 > Træfik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. Træfik integrates with your existing infrastructure components (Docker, Swarm mode, Kubernetes, Marathon, Consul, Etcd, Rancher, Amazon ECS, ...) and configures itself automatically and dynamically. Pointing Træfik at your orchestrator should be the only configuration step you need.
