@@ -3,7 +3,7 @@ Date: 2018-08-13- 14:54
 Modified: 2018-08-13- 14:54
 Category: posts
 Tags: DevOps, Kubernetes, Docker, Traefik, LoadBalancer, helm, weave, 
-Slug: noted-on-kubernetes
+Slug: notes-on-kubernetes
 Authors: Jitse-Jan
 Summary: After numerous restarts and resets of my VPS and executing over 20 different tutorials, I finally have my receipe to get my single node Kubernetes cluster with a proper load balancer working. Please note that the last version of my Kubernetes experiment can be found on my [Git repo](https://github.com/jitsejan/kubernetes-dev). Remember that this repository mainly contains a variety of YAML files that got the system working. What worked for me, might not work for anyone else. 
 
