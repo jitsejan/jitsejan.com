@@ -1,0 +1,8 @@
+Title: Interacting with Parquet on S3 with PyArrow and s3fs
+Date: 2018-08-17 17:30
+Modified: 2018-08-17 17:30
+Category: posts
+Tags: notebook, Python, Jupyter, S3, pyarrow, s3fs, Parquet
+Slug: interacting-with-parquet-on-s3
+Authors: Jitse-Jan
+Summary: A simple example on interaction with Parquet files on AWS S3.
