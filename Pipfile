@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+"beautifulsoup4" = "*"
+ipython = "*"
+pelican = "*"
+webassets = "*"
+nbconvert = "*"
+"Fabric3" = "*"
+Markdown = "*"
+
+[requires]
+python_version = "3.6"
