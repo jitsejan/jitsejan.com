@@ -13,6 +13,7 @@ webassets = "*"
 nbconvert = "*"
 "Fabric3" = "*"
 Markdown = "*"
+fabric = "*"
 
 [requires]
 python_version = "3.6"
