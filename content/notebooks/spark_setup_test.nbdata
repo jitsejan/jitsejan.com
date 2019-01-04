@@ -1,0 +1,8 @@
+Title: Using Spark to read from S3
+Date: 2019-01-04 16:31
+Modified: 2019-01-04 16:31
+Category: posts
+Tags: notebook, Python, Jupyter, Spark, pyspark, AWS, S3
+Slug: using-spark-to-read-from-s3
+Authors: Jitse-Jan
+Summary: A short example on how to interact with S3 from Pyspark.
