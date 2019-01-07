@@ -1,0 +1,8 @@
+Title: Calculate differences with sparse date/value dataframes
+Date: 2019-01-07 12:54
+Modified: 2019-01-07 12:54
+Category: posts
+Tags: notebook, Python, Jupyter, interpolation, Pandas, dataframes
+Slug: difference-with-sparse-dataframes
+Authors: Jitse-Jan
+Summary: This notebook contains a small example that interpolates the values for a sparse dataframe and calculates the difference with a smaller dataframe.
