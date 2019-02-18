@@ -227,16 +227,18 @@ Add a new route to `server/app.js` and add some fake data to be returned:
  ...
  app.get('/characters', (req, res) => {
   res.send(
-    [
-      {
-        name: "Mario",
-        color: "red"
-      },
-      {
-        name: "Luigi",
-        color: "green"
-      }
-    ]
+    {
+      'characters': [
+        {
+          name: "Mario",
+          color: "red"
+        },
+        {
+          name: "Luigi",
+          color: "green"
+        }
+      ]
+    }
   )
 })
 ...
@@ -255,8 +257,8 @@ jitsejan@dev:~$ curl dev.jitsejan.com:3000/characters | jq '.'
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100    65  100    65    0     0   1029      0 --:--:-- --:--:-- --:--:--  1031
-[
-  {
+"characters": [
+   {
     "name": "Mario",
     "color": "red"
   },
@@ -280,20 +282,64 @@ jitsejan@dev:~/code/mongo-express-vue-node/client$ npm install --save axios
 Create a new Vue component to show the characters from the API. Add the content to `client/src/components/Characters.vue`:
 
 ```html
-<template>
+<<template>
   <div class="characters">
     This file will list all the characters.
-  </div>
+    <div v-for="character in characters" :key="character.name">
+        <p>
+            <span><b>{{ character.name }}</b></span><br />
+            <span>{{ character.color }}</span><br/>
+        </p>
+        </div>
+    </div>
 </template>
 
 <script>
+import CharactersService from '@/services/CharactersService'
 export default {
   name: 'Characters',
   data () {
-    return {}
+    return {
+      characters: []
+    }
+  },
+  mounted () {
+    this.getCharacters()
+  },
+  methods: {
+    async getCharacters () {
+      const response = await CharactersService.fetchCharacters()
+      this.characters = response.data.characters
+      console.log(response.data)
+    }
   }
 }
 </script>
+```
+
+with `client/src/services/CharactersService.js` contains
+
+```
+import api from '@/services/api'
+
+export default {
+  fetchCharacters () {
+    return api().get('characters')
+  }
+}
+
+```
+
+and `client/src/services/api.js` contains
+
+```
+import axios from 'axios'
+
+export default() => {
+  return axios.create({
+    baseURL: `http://localhost:3000`
+  })
+}
 ```
 
 Add a route to `client/src/router/index.js` for the characters view by adding the import of the component and defining the route parameters.
@@ -329,3 +375,5 @@ Main page:
 <center><img style="max-width:500px; -webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(2px 5px 5px #222);" src="images/main_menu.png" /></center>
 Character page:
 <center><img style="max-width:500px; -webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(2px 5px 5px #222);" src="images/characters_mevn.png" /></center>
+
+For the most code, check the [Github repo](https://github.com/jitsejan/mevn-stack-tutorial).
