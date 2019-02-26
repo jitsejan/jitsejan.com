@@ -34,7 +34,7 @@ NOTEBOOK_DIR = 'notebooks'
 LOAD_CONTENT_CACHE = False
 
 DISPLAY_PAGES_ON_MENU = True
-FACEBOOK_USERNAME = 'jitsejan'
+# FACEBOOK_USERNAME = 'jitsejan'
 FLICKR_USERNAME = 'jitsejan'
 LINKEDIN_USERNAME = 'jitsejan'
 SPOTIFY_USERNAME = 'jitsejan'
