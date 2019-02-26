@@ -1,0 +1,8 @@
+Title: Using Azure Blob Storage and Parquet
+Date: 2019-02-26 13:07
+Modified: 2019-02-26 13:07
+Category: posts
+Tags: notebook, Python, Jupyter, Spark, Azure, Blob. PySpark, parquet, data
+Slug: using-azure-blob-and-parquet
+Authors: Jitse-Jan
+Summary: My attempt to interact with Parquet files on Azure Blob Storage. Reading and writing Pandas dataframes is straightforward, but only the reading part is working with Spark 2.4.0.
