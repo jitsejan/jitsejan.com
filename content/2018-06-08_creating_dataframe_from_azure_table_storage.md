@@ -32,7 +32,7 @@ def get_data_from_table_storage_table(table_service, filter_query):
 
 fq = "PartitionKey eq '12345'"
 ts = set_table_service()
-df = get_data_dataframe_from_table_storage_table(table_service=ts,
-                                                 filter_query=fq)
+df = get_dataframe_from_table_storage_table(table_service=ts,
+                                            filter_query=fq)
 
 ```
