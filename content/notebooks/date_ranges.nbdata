@@ -5,4 +5,4 @@ Category: posts
 Tags: notebook, Python, Jupyter, date, generation, daterange
 Slug: date-range-with-python
 Authors: Jitse-Jan
-Summary: 
+Summary: In this notebook I create a date range with a precision of days and a date range with a precision of a month using `datetime` with `timedelta`. This has helped me for automating filtering tasks, where I had to query data each day for a certain period and write te results to timestamped files.
