@@ -1,0 +1,8 @@
+Title: Interacting with AWS Glue
+Date: 2019-04-02 12:44
+Modified: 2019-04-02 12:44
+Category: posts
+Tags: notebook, AWS, Python, Jupyter, Glue
+Slug: interacting-with-aws-glue
+Authors: Jitse-Jan
+Summary: In this notebook I interact with [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html) using `boto3`.
