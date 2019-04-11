@@ -1,6 +1,6 @@
 Title: Using Python and Javascript together with Flask
 Date: 2017-08-01 16:38
-Modified: 2017-08-01 16:38
+Modified: 2019-04-11 16:54
 Category: posts
 Tags: Python, Javascript, Flask, matplotlib, web
 Slug: python-and-javascript-in-flask
@@ -112,7 +112,7 @@ if __name__ == '__main__':
 
 The second part of the magic happens in the Javascript file. In this file a canvas is generated and added to the DOM. The mouse is used to draw dots on the canvas with a predefined color and radius. One button is used to send the data of the current drawing on the canvas and another one is used to clear the canvas.
 
-`templates/static/js/script/js`
+`templates/static/js/script.js`
 
 ```javascript
 $( document ).ready(function() {
@@ -301,3 +301,5 @@ After putting all the files together the application can be started and visited 
 ```shell
 ~/code/flask-app $ FLASK_APP=app.py FLASK_DEBUG=1 flask run
 ```
+
+See the [Github repo](https://github.com/jitsejan/python-flask-with-javascript) for the final code.
