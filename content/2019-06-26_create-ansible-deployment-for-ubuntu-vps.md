@@ -174,6 +174,7 @@ I have divided the roles along the way and I do not guarantee this is the most l
 
 #### Base role
 The first role I created is the **base** role which will take care of the following:
+
 - Check if all necessary packages are installed.
 - Create the personal user account based on the prompt of the playbook.
 - Add the user to sudo and create a password less login on the local computer.
