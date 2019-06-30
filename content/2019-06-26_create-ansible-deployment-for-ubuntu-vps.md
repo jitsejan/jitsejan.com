@@ -7,7 +7,6 @@ Slug: creating-ansible-deployment-for-ubuntu-vps
 Authors: Jitse-Jan
 Summary: My first experiment with Ansible to automate the provisioning of my server.
 
-# Provisioning my VPS with Ansible
 ## Objective
 Clean installation on Ubuntu 18.04 with the following requirements:
 
