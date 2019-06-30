@@ -2,7 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a755ac76-4535-4e9b-a47f-30c8474c1e0c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/content/2019-06-26_create-ansible-deployment-for-ubuntu-vps.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/2019-06-26_create-ansible-deployment-for-ubuntu-vps.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/2019-06-30_setting-up-spark-with-minio-as-object-storage.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/2019-06-30_setting-up-spark-with-minio-as-object-storage.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/archives.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/author/jitse-jan.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/jitse-jan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/author/jitse-jan2.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/jitse-jan2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/author/jitse-jan3.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/jitse-jan3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/author/jitse-jan4.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/jitse-jan4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/author/jitse-jan5.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/jitse-jan5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/author/jitse-jan6.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/jitse-jan6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/author/jitse-jan7.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/jitse-jan7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/author/jitse-jan8.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/jitse-jan8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/author/jitse-jan9.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/jitse-jan9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/category/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/category/posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/category/posts2.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/category/posts2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/category/posts3.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/category/posts3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/category/posts4.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/category/posts4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/category/posts5.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/category/posts5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/category/posts6.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/category/posts6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/category/posts7.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/category/posts7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/category/posts8.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/category/posts8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/category/posts9.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/category/posts9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/index3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/index4.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/index4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/index5.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/index5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/index6.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/index6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/index7.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/index7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/index8.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/index8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/index9.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/index9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/setting-up-spark-with-minio-as-object-storage.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/setting-up-spark-with-minio-as-object-storage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/ansible.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/ansible.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/data-engineer.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/data-engineer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/devops.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/devops.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/minio.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/minio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/object-storage.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/object-storage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/spark.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/spark.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/ubuntu.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/ubuntu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/vps.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/vps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tipuesearch_content.json" beforeDir="false" afterPath="$PROJECT_DIR$/output/tipuesearch_content.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/using-buttermcs-in-jupyter.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/using-buttermcs-in-jupyter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/using-d3-in-jupyter-notebook.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/using-d3-in-jupyter-notebook.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +57,8 @@
         <entry file="file://$PROJECT_DIR$/content/2019-06-30_setting-up-spark-with-minio-as-object-storage.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="662">
-                <caret line="154" column="78" selection-start-line="154" selection-start-column="78" selection-end-line="154" selection-end-column="78" />
+              <first_editor relative-caret-position="442">
+                <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
               </first_editor>
               <second_editor />
             </state>
@@ -156,8 +197,8 @@
     <entry file="file://$PROJECT_DIR$/content/2019-06-30_setting-up-spark-with-minio-as-object-storage.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="662">
-            <caret line="154" column="78" selection-start-line="154" selection-start-column="78" selection-end-line="154" selection-end-column="78" />
+          <first_editor relative-caret-position="442">
+            <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>
