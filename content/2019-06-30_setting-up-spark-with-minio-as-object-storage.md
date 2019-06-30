@@ -5,14 +5,13 @@ Category: posts
 Tags: DevOps, Ansible, data engineer, VPS, Ubuntu, Spark, minIO, object storage
 Slug: setting-up-spark-with-minIO-as-object-storage
 Authors: Jitse-Jan
-Summary: To setup one of my data projects, I need (object) storage to save my data. Using Spark I want to be able to read and write Parquet and other file formats.
+Summary: To setup one of my data projects, I need (object) storage to save my data. Using Spark I want to be able to read and write Parquet, CSV and other file formats.
 
 ## Objective
 - Install [Spark](https://spark.apache.org/)
 - Install [Hadoop](https://hadoop.apache.org/)
 - Install [minIO](https://min.io/)  server
 - Extend [Ansible](https://www.ansible.com/) configuration
-
 
 ## Introduction
 At work we use AWS [S3](https://aws.amazon.com/s3/) for our datalake. Since I am working on some 

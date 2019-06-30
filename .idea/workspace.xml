@@ -57,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/content/2019-06-30_setting-up-spark-with-minio-as-object-storage.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="442">
+              <first_editor relative-caret-position="-298">
                 <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
               </first_editor>
               <second_editor />
@@ -197,7 +197,7 @@
     <entry file="file://$PROJECT_DIR$/content/2019-06-30_setting-up-spark-with-minio-as-object-storage.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="442">
+          <first_editor relative-caret-position="-298">
             <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
           </first_editor>
           <second_editor />
