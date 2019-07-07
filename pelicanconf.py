@@ -48,9 +48,10 @@ TYPOGRIFY = False
 PAGE_PATHS = ['pages']
 PAGES = [
     # {'url': 'pages/latex-cheatsheet', 'title': 'Latex cheatsheet'},
-		 {'url': 'pages/pandas-cheatsheet', 'title': 'Pandas cheatsheet'},
-		 {'url': 'pages/python-cheatsheet', 'title': 'Python cheatsheet'},
-# 		 {'url': 'pages/splunk-cheatsheet', 'title': 'Splunk cheatsheet'},
+	{'url': 'pages/pandas-cheatsheet', 'title': 'Pandas cheatsheet'},
+	{'url': 'pages/python-cheatsheet', 'title': 'Python cheatsheet'},
+	{'url': 'pages/spark-cheatsheet', 'title': 'Spark cheatsheet'},
+	# {'url': 'pages/splunk-cheatsheet', 'title': 'Splunk cheatsheet'},
 		]
 
 ABOUT = """<p>I am a Data Engineer currently working for MarketInvoice in London. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>

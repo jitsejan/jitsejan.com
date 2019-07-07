@@ -10,9 +10,11 @@ Summary: This is my Pandas cheatsheet
 This is my [Pandas](http://pandas.pydata.org) cheatsheet. 
 
 Note that I import pandas the 'standard' way:
+
 ``` python
 import pandas as pd
 ```
+
 ## Convert with dataframes
 ### Create dataframe from a dictionary
 ``` python
@@ -32,6 +34,11 @@ character_df = pd.DataFrame.from_csv("characters.csv", sep='\t', encoding='utf-8
 ### Convert dataframe to CSV
 ``` python
 character_df.to_csv('characters.csv', sep='\t', encoding='utf-8')
+```
+
+### Convert dataframe to JSON
+```python
+character_df.to_json('cahracters.json', orient='records')
 ```
 
 ### Convert database query to dataframe
@@ -61,6 +68,13 @@ character_df = character_df.replace({'NaN': None}, regex=True)
 ``` python
 character_df.rename(columns={'name': 'character_name'}, inplace=True)
 ```
+
+Or replace characters:
+
+```python
+character_df.columns = character_df.columns.str.replace('.', '_')
+```
+
 ### Drop a column
 ``` python
 character_df = character_df.drop('origin', axis=1)
@@ -143,6 +157,12 @@ df['difference'] = df['amount'] - df['amount'].shift(+1)
 df['group_maximum'] = df.groupby(['category'])['score'].transform(max)
 ```
 
+### Get maximum 10
+
+```python
+df.groupby(['category'])['viewers'].sum().nlargest(10)
+```
+
 ### Create category based on values
 ``` python
 def set_category(row):
@@ -161,3 +181,46 @@ df['category'] = df.apply(set_category, axis=1)
 df['inverse_number'] = df['number'].apply(lambda x: x**(-1))
 ``` 
 
+### Sort values
+
+```python
+df.sort_values('name', ascending=False)
+```
+
+### Normalize a JSON column
+
+```python
+pd.io.json.json_normalize(df['json_col'])
+```
+
+
+### Select data
+
+```python
+df[df.name.notnull()]
+```
+or
+```python
+df.query('name.notnull()',
+         engine='python')
+```
+
+### Expand cell with list to rows
+
+```python
+df['list_cells']\
+    .apply(pd.Series)\
+    .stack()\
+    .reset_index(level=1,
+                 drop=True)\
+    .to_frame('list_cell')
+```
+
+## Find and drop empty columns
+
+```python
+empty_cols = [col for col in df.columns if df[col].isnull().all()]
+df.drop(empty_cols,
+        axis=1,
+        inplace=True)
+```
