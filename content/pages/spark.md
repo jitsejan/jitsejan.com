@@ -1,4 +1,4 @@
-Title: Pandas cheatsheet
+Title: Spark cheatsheet
 Date: 2019-07-07 13:51
 Modified: 2019-07-07 13:51
 Category: Python, Spark, PySpark

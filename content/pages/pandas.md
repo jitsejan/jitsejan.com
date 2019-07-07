@@ -19,26 +19,25 @@ import pandas as pd
 ### Create dataframe from a dictionary
 ``` python
 character_df = pd.DataFrame.from_dict(characters)
-```
-
-### Create dictionary from dataframe
-``` python
 characters = character_df.to_dict(orient='records')
 ```
 
 ### Convert CSV to dataframe
 ``` python
 character_df = pd.DataFrame.from_csv("characters.csv", sep='\t', encoding='utf-8')
-```
-
-### Convert dataframe to CSV
-``` python
 character_df.to_csv('characters.csv', sep='\t', encoding='utf-8')
 ```
 
 ### Convert dataframe to JSON
 ```python
-character_df.to_json('cahracters.json', orient='records')
+character_df = pd.DataFrame.from_json('characters.json')
+character_df.to_json('characters.json', orient='records')
+```
+
+### Convert dataframe to pickle
+```python
+character_df = pd.read_pickle('characters.pandas')
+character_df.to_pickle('characters.pandas')
 ```
 
 ### Convert database query to dataframe
@@ -82,7 +81,7 @@ character_df = character_df.drop('origin', axis=1)
 ### Drop a row
 Drop all rows where the name is NaN.
 ``` python
-character_df.dropna(subset = ['name'], inplace=True)
+character_df.dropna(subset=['name'], inplace=True)
 ```
 
 ### Delete a column
@@ -224,3 +223,12 @@ df.drop(empty_cols,
         axis=1,
         inplace=True)
 ```
+
+## Merge two dataframe
+```python
+combined_data_df = first_df.merge(second_df,
+                                  left_on='left_id',
+                                  right_on='right_id',
+                                  how='left')
+```
+
