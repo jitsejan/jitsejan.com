@@ -27,8 +27,6 @@ spark = pyspark.sql.SparkSession.builder \
 
 ```python
 json_sdf = spark.read.json("mydata.json")
-
-
 ```
 
 
@@ -43,4 +41,29 @@ json_pdf = json_sdf.toPandas()
 
 ```python
 row.asDict(recursive=True)
+```
+
+
+## Join two dataframes
+
+```python
+import pyspark.sql.functions as F
+
+df = df_01.alias('dfone').join(df_02.alias('dftwo'),
+                               on=[F.col('dfone.id') == F.col('dftwo.id')],
+                               how='left').drop('id')
+```
+
+## Select fields from dataframe
+
+```python
+df.select('id', 'name', 'country', 'amount').show()
+```
+
+## Expand JSON 
+
+```python
+df.withColumn('json',
+              F.from_json(F.col('_json_col').cast('string'),
+                          json_schema)).show()
 ```

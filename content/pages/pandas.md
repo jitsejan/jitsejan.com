@@ -232,3 +232,20 @@ combined_data_df = first_df.merge(second_df,
                                   how='left')
 ```
 
+
+## Calculate difference between two consecutive rows
+
+```python
+df['diff'] = df['amount']\
+    .diff()\
+    .fillna(0)
+```
+
+
+## Filter each column larger than threshold
+
+```python
+THRESHOLD = 100
+df[df.gt(THRESHOLD).all(axis=1)].sort_values('total',
+                                             ascending=False)
+```
