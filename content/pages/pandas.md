@@ -10,28 +10,34 @@ Summary: This is my Pandas cheatsheet
 This is my [Pandas](http://pandas.pydata.org) cheatsheet. 
 
 Note that I import pandas the 'standard' way:
+
 ``` python
 import pandas as pd
 ```
+
 ## Convert with dataframes
 ### Create dataframe from a dictionary
 ``` python
 character_df = pd.DataFrame.from_dict(characters)
-```
-
-### Create dictionary from dataframe
-``` python
 characters = character_df.to_dict(orient='records')
 ```
 
 ### Convert CSV to dataframe
 ``` python
 character_df = pd.DataFrame.from_csv("characters.csv", sep='\t', encoding='utf-8')
+character_df.to_csv('characters.csv', sep='\t', encoding='utf-8')
 ```
 
-### Convert dataframe to CSV
-``` python
-character_df.to_csv('characters.csv', sep='\t', encoding='utf-8')
+### Convert dataframe to JSON
+```python
+character_df = pd.DataFrame.from_json('characters.json')
+character_df.to_json('characters.json', orient='records')
+```
+
+### Convert dataframe to pickle
+```python
+character_df = pd.read_pickle('characters.pandas')
+character_df.to_pickle('characters.pandas')
 ```
 
 ### Convert database query to dataframe
@@ -61,6 +67,13 @@ character_df = character_df.replace({'NaN': None}, regex=True)
 ``` python
 character_df.rename(columns={'name': 'character_name'}, inplace=True)
 ```
+
+Or replace characters:
+
+```python
+character_df.columns = character_df.columns.str.replace('.', '_')
+```
+
 ### Drop a column
 ``` python
 character_df = character_df.drop('origin', axis=1)
@@ -68,7 +81,7 @@ character_df = character_df.drop('origin', axis=1)
 ### Drop a row
 Drop all rows where the name is NaN.
 ``` python
-character_df.dropna(subset = ['name'], inplace=True)
+character_df.dropna(subset=['name'], inplace=True)
 ```
 
 ### Delete a column
@@ -143,6 +156,12 @@ df['difference'] = df['amount'] - df['amount'].shift(+1)
 df['group_maximum'] = df.groupby(['category'])['score'].transform(max)
 ```
 
+### Get maximum 10
+
+```python
+df.groupby(['category'])['viewers'].sum().nlargest(10)
+```
+
 ### Create category based on values
 ``` python
 def set_category(row):
@@ -161,3 +180,72 @@ df['category'] = df.apply(set_category, axis=1)
 df['inverse_number'] = df['number'].apply(lambda x: x**(-1))
 ``` 
 
+### Sort values
+
+```python
+df.sort_values('name', ascending=False)
+```
+
+### Normalize a JSON column
+
+```python
+pd.io.json.json_normalize(df['json_col'])
+```
+
+
+### Select data
+
+```python
+df[df.name.notnull()]
+```
+or
+```python
+df.query('name.notnull()',
+         engine='python')
+```
+
+### Expand cell with list to rows
+
+```python
+df['list_cells']\
+    .apply(pd.Series)\
+    .stack()\
+    .reset_index(level=1,
+                 drop=True)\
+    .to_frame('list_cell')
+```
+
+## Find and drop empty columns
+
+```python
+empty_cols = [col for col in df.columns if df[col].isnull().all()]
+df.drop(empty_cols,
+        axis=1,
+        inplace=True)
+```
+
+## Merge two dataframe
+```python
+combined_data_df = first_df.merge(second_df,
+                                  left_on='left_id',
+                                  right_on='right_id',
+                                  how='left')
+```
+
+
+## Calculate difference between two consecutive rows
+
+```python
+df['diff'] = df['amount']\
+    .diff()\
+    .fillna(0)
+```
+
+
+## Filter each column larger than threshold
+
+```python
+THRESHOLD = 100
+df[df.gt(THRESHOLD).all(axis=1)].sort_values('total',
+                                             ascending=False)
+```

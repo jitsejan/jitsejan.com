@@ -127,3 +127,23 @@ condition = lambda col: col not in DESIRED_COLUMNS
 # Filter the dataframe
 filtered_df = df.drop(*filter(condition, df.columns))
 ```
+
+## Use seaborn to create heatmap
+```python
+import seaborn as sns
+sns.heatmap(df\
+            .groupby(['field_a', 'field_b'])['amount']\
+            .sum()\
+            .to_frame()\
+            .reset_index()\
+            .pivot('field_a', 'field_b', 'amount'));
+```
+or 
+
+```python
+sdf = df\
+        .groupby(['field_a', 'field_b'])['amount']\
+        .sum()\
+        .reset_index()
+sns.heatmap(sdf.pivot('genre', 'country', 'view_hours'))
+```
