@@ -1,0 +1,8 @@
+Title: Using SFTP with Spark
+Date: 2019-08-02 16:55
+Modified: 2019-08-02 16:55
+Category: posts
+Tags: notebook, Spark, PySpark, Python, Jupyter, SFTP, Data Engineering
+Slug: sftp-with-spark
+Authors: Jitse-Jan
+Summary: A simple showcase of how to use SFTP together with Spark. By using Spark I can read the files directly into a Spark RDD. Reading big files was failing for me when I was using plain Python with `pysftp`. 
