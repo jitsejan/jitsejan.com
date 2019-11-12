@@ -54,7 +54,7 @@ PAGES = [
 	# {'url': 'pages/splunk-cheatsheet', 'title': 'Splunk cheatsheet'},
 		]
 
-ABOUT = """<p>I am a Data Engineer currently working for MarketInvoice in London. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
+ABOUT = """<p>I am a Data Engineer currently working for <a href="https://marketfinance.com">MarketFinance</a> in London. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
 <p>
 While I mainly work in Python, I try to experiment with different languages and frameworks when I can. Lately I have been experimenting with Javascript a bit more, since both
 for visualizations as for modern web applications it is the go-to language. 
