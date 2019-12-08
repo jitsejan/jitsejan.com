@@ -1,9 +1,9 @@
-Title: Run tests dynamically
+Title: Run methods dynamically by name
 Date: 2019-12-06 01:56
 Modified: 2019-12-07 04:13
 Category: posts
 Tags: Python, pytest, dynamic, testing, availability, AWS, boto3, API
-Slug: run-tests-dynamically
+Slug: run-methods-dynamically-by-name
 Authors: Jitse-Jan
 Summary: In this project I want to verify the availability of the APIs that we use to ingest data into our data platform. In the example I will use Jira, Workable and HiBob, since they offer clean APIs without too much configuration. First I will create a test suite to verify the availability and once this works move it to a Lambda function that could be scheduled with CloudWatch on a fixed schedule.
 
