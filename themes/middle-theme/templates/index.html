@@ -7,40 +7,39 @@
   <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
     {% include 'searchbar.html' %}
   </div>
-  <div class="row">
-    {% for article in articles_page.object_list %}
-    <div class="col-6">
-      <article>
-        <header>
-          <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-          <time datetime="" title="{{ article.date.isoformat() }}" pubdate>{{ article.locale_date }}</time>
-        </header>
+  <div class="col-md-9">
+  {% for article in articles_page.object_list %}
+  <article>
+    <header>
+      <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+      <time datetime="" title="{{ article.date.isoformat() }}" pubdate>{{ article.locale_date }}</time>
+    </header>
 
-        <div class="article_content">
-          {% if article.summary %}
-            {{ article.summary }}
-          {% else %}
-            {{ article.content }}
-          {% endif %}
-        </div>
-        
-        <div class="meta">
-          {% if article.summary %}
-          <div>
-            <a href="{{ SITEURL }}/{{ article.url }}" class="read_more">Read more &#8594;</a>
-          </div>
-          {% endif %}
-          <div>
-              {% for tag in article.tags %}
-                <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag }}</a>
-              {% endfor %}
-          </div>
-        </div>
-      </article>
+    <div class="article_content">
+      {% if article.summary %}
+        {{ article.summary }}
+      {% else %}
+        {{ article.content }}
+      {% endif %}
     </div>
-    {% endfor %}
-  </div>
+    
+    <div class="meta">
+      {% if article.summary %}
+      <div>
+        <a href="{{ SITEURL }}/{{ article.url }}" class="read_more">Read more &#8594;</a>
+      </div>
+       {% endif %}
+      <div>
+          {% for tag in article.tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag }}</a>
+          {% endfor %}
+      </div>
+
+    </div>
+
+  </article>
   <div class="separator"></div>
+  {% endfor %}
 
   <nav class="pagination row">
     <div class="col-xs-6 left">
