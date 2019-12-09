@@ -209,7 +209,7 @@ I will only add the good weather tests from the previous test set, hence I will 
 
 ```python
 # continue availabilitychecker.py
-		def verify_hibob_is_available(self):
+    def verify_hibob_is_available(self):
         """ Verify that the HiBob API is available """
         api_key = self._get_param("HIBOB_API_KEY")
         api_url = self._get_param("HIBOB_API_URL")
