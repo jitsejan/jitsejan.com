@@ -1,4 +1,4 @@
-Title: Casting a PySpark DataFrame column to a specific datatype.
+Title: Casting a PySpark DataFrame column to a specific datatype
 Date: 2019-12-30 04:06
 Modified: 2019-12-30 04:06
 Category: posts
