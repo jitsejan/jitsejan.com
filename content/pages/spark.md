@@ -67,3 +67,10 @@ df.withColumn('json',
               F.from_json(F.col('_json_col').cast('string'),
                           json_schema)).show()
 ```
+
+## Casting a datatype
+
+```python
+from pyspark.sql.types import IntegerType
+dataframe.withColumn("count", F.col("count").cast(IntegerType()))
+```
