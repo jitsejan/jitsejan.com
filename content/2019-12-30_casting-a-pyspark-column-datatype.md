@@ -9,6 +9,7 @@ Summary:
 
 
 ```python
+import pyspark.sql.functions as F
 from pyspark.sql.types import IntegerType
 # Cast the count column to an integer
 dataframe.withColumn("count", F.col("count").cast(IntegerType()))
