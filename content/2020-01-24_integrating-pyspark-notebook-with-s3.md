@@ -9,11 +9,11 @@ Summary: In my post [Using Spark to read from S3](https://www.jitsejan.com/using
 
 ## Introduction
 
-In my post [Using Spark to read from S3](https://www.jitsejan.com/using-spark-to-read-from-s3.html) I explained how I was able to connect Spark to AWS S3 on a Ubuntu machine. Last week I was trying to connect to S3 again using Spark on my local machine, but I wasn't able to read data from our datalake. Our datalake is hosted in the  `eu-west-2` region which apparently requires you to specify the version of authentication. Instead of setting up the right environment on my machine and reconfigure everything, I chose to update the Docker image from my [notebook repo](https://github.com/jitsejan/notebooks) so I could test on my Mac before pushing it to my server. Instead of configuring both my local and remote environment I can simply spin up the Docker container and have two identical environments. 
+In my post [Using Spark to read from S3](https://www.jitsejan.com/using-spark-to-read-from-s3.html) I explained how I was able to connect Spark to AWS S3 on a Ubuntu machine. Last week I was trying to connect to S3 again using Spark on my local machine, but I wasn't able to read data from our datalake. Our datalake is hosted in the  `eu-west-2` region which apparently requires you to specify the version of authentication. Instead of setting up the right environment on my machine and reconfigure everything, I chose to update the Docker image from my [notebook repo](https://github.com/jitsejan/notebooks) so I could test locally on my Mac before pushing it to my server. Instead of configuring both my local and remote environment I can simply spin up the Docker container and have two identical environments. 
 
 ## Implementation
 
-Rather than providing the AWS credentials in the Spark config, I want to keep things simple and only have one credential file from where I will read the important information. The contents of `~/.aws/credentials ` specify just one account in this example, but this is where I have specified all the different AWS accounts we are using. This file will be copied to the Docker container by mounting the local `aws` folder inside the Docker instance.
+Rather than providing the AWS credentials in the Spark config, I want to keep things simple and only have one credentials file from where I will read the important information. The contents of `~/.aws/credentials ` specify just one account in this example, but this is where I have specified all the different AWS accounts we are using. This file will be copied to the Docker container by mounting the local `aws` folder inside the Docker instance.
 
 ```ini
 [prod]
@@ -164,13 +164,13 @@ CONTAINER ID        IMAGE                       COMMAND                  CREATED
 ade618e362da        jitsejan/pyspark-notebook   "tini -g -- /opt/con…"   2 minutes ago       Up 2 minutes        0.0.0.0:8558->8558/tcp, 8888/tcp   notebooks_jitsejan-pyspark_1
 ```
 
-![image-20200124134425146](images/image-20200124134425146.png)
+<img src="images/image-20200124134425146.png" />
 
 For convenience I am running [Portainer](https://www.portainer.io/) because it is easier to get an overview of the containers running in Docker instead of using the CLI.. It also helps to clean up all the orphan images.
 
-![image-20200124134559900](images/image-20200124134559900.png)
+<img src="images/image-20200124134559900.png" />
 
-![image-20200124134717082](images/image-20200124134717082.png)
+<img src="images/image-20200124134717082.png" />
 
 ## Code
 
@@ -211,4 +211,7 @@ df = sqlContext.read.parquet("s3a://mi-datalake-prod/warehouse/platform/company_
 
 
 
-![image-20200124135946914](image-20200124135946914.png)
+<img src="image-20200124135946914.png" />
+
+
+Hope this helps!
