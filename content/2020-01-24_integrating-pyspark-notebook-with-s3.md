@@ -164,13 +164,13 @@ CONTAINER ID        IMAGE                       COMMAND                  CREATED
 ade618e362da        jitsejan/pyspark-notebook   "tini -g -- /opt/con…"   2 minutes ago       Up 2 minutes        0.0.0.0:8558->8558/tcp, 8888/tcp   notebooks_jitsejan-pyspark_1
 ```
 
-<img src="images/image-20200124134425146.png" />
+![pyspark_terminal](images/pyspark_terminal.png)
 
 For convenience I am running [Portainer](https://www.portainer.io/) because it is easier to get an overview of the containers running in Docker instead of using the CLI.. It also helps to clean up all the orphan images.
 
-<img src="images/image-20200124134559900.png" />
+![pyspark_portainer](images/pyspark_portainer.png)
 
-<img src="images/image-20200124134717082.png" />
+![pypspark_jupyter_login](images/pypspark_jupyter_login.png)
 
 ## Code
 
@@ -210,8 +210,7 @@ df = sqlContext.read.parquet("s3a://mi-datalake-prod/warehouse/platform/company_
 ```
 
 
-
-<img src="image-20200124135946914.png" />
+![pyspark_jupyterlab](images/pyspark_jupyterlab.png)
 
 
 Hope this helps!
