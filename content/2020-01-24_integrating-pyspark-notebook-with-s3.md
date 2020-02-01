@@ -201,7 +201,7 @@ conf = (
 )
 ```
 
-WIth the above configuration I initialize the Spark context and can read from our datalake. 
+With the above configuration I initialize the Spark context and can read from our datalake. 
 
 ```python
 sc = SparkContext(conf=conf).getOrCreate()
