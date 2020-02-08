@@ -5,7 +5,7 @@ Category: posts
 Tags: Python, PySpark, Redshift, dataframe, Spark
 Slug: integrating-pyspark-with-redshift
 Authors: Jitse-Jan
-Summary: This short article shows how to connect to AWS Redshift from a PySpark notebook. 
+Summary: In my article on [how to connect to S3 from PySpark](https://www.jitsejan.com/integrating-pyspark-notebook-with-s3.html) I showed how to setup Spark with the right libraries to be able to connect to read and right from AWS S3. In the following article I show a quick example how I connect to Redshift and use the S3 setup to write the table to file. 
 
 In my article on [how to connect to S3 from PySpark](https://www.jitsejan.com/integrating-pyspark-notebook-with-s3.html) I showed how to setup Spark with the right libraries to be able to connect to read and right from AWS S3. In the following article I show a quick example how I connect to Redshift and use the S3 setup to write the table to file. 
 
