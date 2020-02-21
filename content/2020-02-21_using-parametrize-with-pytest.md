@@ -40,14 +40,14 @@ class TestCastleClass:
     ...
     
     def test_has_access_true_with_super_mushroom(self, castle, character):
-				""" Test that has_access returns True for Super Mushroom """
-				character.powerup = 'Super Mushroom'
-				assert castle.has_access(character)
+        """ Test that has_access returns True for Super Mushroom """
+        character.powerup = 'Super Mushroom'
+        assert castle.has_access(character)
 
     def test_has_access_false_without_super_mushroom(self, castle, character):
-				""" Test that has_access returns False for other powerups """
-			  character.powerup = 'Not a mushroom'
-				assert not castle.has_access(character)
+        """ Test that has_access returns False for other powerups """
+        character.powerup = 'Not a mushroom'
+        assert not castle.has_access(character)
         
     ...
 ```
@@ -72,7 +72,7 @@ tests/test_castle_class.py::TestCastleClass::test_has_access_false_without_super
 Using [parametrize](https://docs.pytest.org/en/latest/parametrize.html) writing tests becomes significantly easier. Instead of writing a test for each combination of parameters I can write one test with a list of different sets of parameters. For each set of parameters the same test case will be executed, hence the two test cases above can be replaced by:
 
 ```python
-		@pytest.mark.parametrize('powerup,has_access', [
+    @pytest.mark.parametrize('powerup,has_access', [
         ("Super Mushroom", True),
         ("Not a mushroom", False),
     ], ids=['successful', 'failure-without-super-mushroom'])
