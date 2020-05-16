@@ -12,40 +12,38 @@ In this project I will add data to a MongoDB database and make it accessible usi
 
 ## Prerequisites
 
-- **Python**
+### Python
+For this project I will be using Python 3.7 and `pipenv` as my virtual environment. 
 
-  For this project I will be using Python 3.7 and `pipenv` as my virtual environment. 
+### MongoDB
+Install MongoDB on your machine or VPS, or use a *free* [hosted](https://www.mongodb.com/cloud/atlas/lp/general/try?utm_source=compass&utm_medium=product) cluster. 
 
-- **MongoDB**
-
-  Install MongoDB on your machine or VPS, or use a *free* [hosted](https://www.mongodb.com/cloud/atlas/lp/general/try?utm_source=compass&utm_medium=product) cluster. 
-
-  On [Mac](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/), simply use `brew` to install the database. 
+On [Mac](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/), simply use `brew` to install the database. 
   
-  ```bash
-  ❯ brew tap mongodb/brew
-  ❯ brew install mongodb-community@4.2
   ```
+❯ brew tap mongodb/brew
+❯ brew install mongodb-community@4.2
+```
 
-  I went with Atlas and tried one of the free clusters they offer.
+I went with Atlas and tried one of the free clusters they offer.
 
-   ![image-20200510214801320](images/fmg_choose_cluster.png)
+<center><img src="images/fmg_choose_cluster.png" width="50%" /></center>
 
-  After selecting the region and the name, simply click on create and wait for the cluster to be ready.
+After selecting the region and the name, simply click on create and wait for the cluster to be ready.
 
-  ![image-20200510215036769](images/fmg_cluster_being_created.PNG)
+<center><img src="images/fmg_cluster_being_created.png" width="50%" /></center>
 
-  3 minutes later the cluster will be ready.
+3 minutes later the cluster will be ready.
 
-  ![image-20200510215036769](images/fmg_show_cluster.png)
+<center><img src="images/fmg_show_cluster.png" width="50%" /></center>
 
-  Go to *Security* -> *Database Access* and create a new Database User and give Admin or Read and Write access to the database. As an optional safety guard it is smart to enable the IP whitelist and add your own IP to the list to make sure no other IPs can access your database.
+Go to *Security* -> *Database Access* and create a new Database User and give Admin or Read and Write access to the database. As an optional safety guard it is smart to enable the IP whitelist and add your own IP to the list to make sure no other IPs can access your database.
 
-  Finally go back to the *Clusters* overview and click on **Connect**. Choose the appropiate connection mechanism for your application. In my case this will be with Python 3.7. This should give you enough information to get started with MongoDB!
+Finally go back to the *Clusters* overview and click on **Connect**. Choose the appropiate connection mechanism for your application. In my case this will be with Python 3.7. This should give you enough information to get started with MongoDB!
 
-  ![image-20200510215729403](images/fmg_connect_cluster.png)
+![image-20200510215729403](images/fmg_connect_cluster.png)
 
-- [Optional] **MongoDB Compass**
+### [Optional] MongoDB Compass
 
   To visualize MongoDB [download](https://www.mongodb.com/download-center/compass) from their website. Use the connection string from the previous step if you want to connect to the hosted cluster directly.
 
@@ -273,7 +271,7 @@ init_db()
 
 To populate the database run the script:
 
-```bash
+```
 ❯ python database.py
 ```
 
@@ -413,7 +411,7 @@ if __name__ == '__main__':
 
 Go to your terminal and run the webapp:
 
-```bash
+```
 ❯ python app.py
 ```
 
