@@ -31,7 +31,7 @@ I went with Atlas and tried one of the free clusters they offer.
 
 After selecting the region and the name, simply click on create and wait for the cluster to be ready.
 
-<center><img src="images/fmg_cluster_being_created.png" width="50%" /></center>
+<center><img src="images/fmg_cluster_being_created.PNG" width="50%" /></center>
 
 3 minutes later the cluster will be ready.
 
@@ -45,7 +45,7 @@ Finally go back to the *Clusters* overview and click on **Connect**. Choose the 
 
 ### [Optional] MongoDB Compass
 
-To visualize MongoDB [download](https://www.mongodb.com/download-center/compass) from their website. Use the connection string from the previous step if you want to connect to the hosted cluster directly.
+To visualize your MongoDB instance [download](https://www.mongodb.com/download-center/compass) MongoDB Compass from their website. Use the connection string from the previous step if you want to connect to the hosted cluster directly.
 
 <center><img src="images/fmg_compass_new.png" width="50%" /></center>
 
@@ -55,11 +55,11 @@ Once you have connected to the database the page will show your cluster, the hos
 
 ## Creating the dataset
 
-As a dataset I will be using information from https://www.mariowiki.com/. More specifcally I will be crawling data from Super Mario 1 levels from https://www.mariowiki.com/Category:Super_Mario_Bros._Levels. Each page has a table containing the **Enemies** and the **Level statistics**.
+As a dataset I will be using information from [https://www.mariowiki.com/](https://www.mariowiki.com/). More specifcally I will be crawling data from Super Mario 1 levels from [https://www.mariowiki.com/Category:Super_Mario_Bros._Levels](https://www.mariowiki.com/Category:Super_Mario_Bros._Levels). Each page with the level details has a table containing the **Enemies** and the **Level statistics**.
 
-<center><img src="images/fmg_enemies.png" width="50%" /></center>
+<center><img src="images/fmg_enemies.png" width="25%" /></center>
 
-<center><img src="images/fmg_compass_databases.png" width="50%" /></center>
+<center><img src="images/fmg_stats.png" width="25%" /></center>
 
 I will just show the reduced version of the script here, but the whole [script](https://github.com/jitsejan/flask-mongodb-graphene/blob/master/crawl.py) is availabe in my Github repo. The script will run through the links on the website and retrieves meta data, the description, enemies and the statistics. The files are stored in a JSON file.
 
@@ -386,7 +386,7 @@ schema = graphene.Schema(query=Query, types=[Powerup, Level, Enemy, Game])
 
 To start the server now the schema is defined we need to create the application. Flask is used as web application with one path (rule) to the GraphQL endpoint. I connect to the MongoDB database and set the database. The server is started on port 5002.
 
-```
+```python
 """ app.py """
 from flask import Flask
 from flask_graphql import GraphQLView
@@ -439,5 +439,5 @@ And that should do it. Check my [GitHub](https://github.com/jitsejan/flask-mongo
 
 ## Sources
 
-- https://graphene-mongo.readthedocs.io/en/latest/tutorial.html
-- https://jeffersonheard.github.io/python/graphql/2018/12/08/graphene-python.html
+- [https://graphene-mongo.readthedocs.io](https://graphene-mongo.readthedocs.io/en/latest/tutorial.html)
+- [https://jeffersonheard.github.io](https://jeffersonheard.github.io/python/graphql/2018/12/08/graphene-python.html)
