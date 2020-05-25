@@ -1,0 +1,8 @@
+Title: Forward filling in Spark
+Date: 2020-05-25 01:31
+Modified: 2029-05-25 01:31
+Category: posts
+Tags: notebook, Python, Jupyter, Spark, pyspark, notebook, data manipulation
+Slug: forward-filling-in-spark
+Authors: Jitse-Jan
+Summary: An exercise where I use Spark to forward fill a sparse dataset.
