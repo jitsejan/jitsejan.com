@@ -15,11 +15,11 @@ In this article I will upload a static website to [IPFS](https://ipfs.io) to get
 
 1. Install IPFS Desktop according to the [install instructions](https://docs.ipfs.io/install/). This will add IPFS to the toolbar (the cube icon).
 
-    <center><img src="images/ipfs_toolbar.png" width="200px" /></center>
+   <img src="images/ipfs_toolbar.png" width="200px" />
 
 2. Verify that IPFS is working properly by clicking the icon.
 
-   <center><img src="images/ipfs_toolbar_popup.png" width="200px" /></center>
+   <img src="images/ipfs_toolbar_popup.png" width="200px" />
 
 3. Test `ipfs` in the command line after enabling *Command Line Tools* in the *Preferences*:
 
@@ -46,7 +46,7 @@ In this article I will upload a static website to [IPFS](https://ipfs.io) to get
 
 2. Initialization will start the node in a local folder. Once you have been added as a node, the daemon can be started. 
 
-   ```bash
+   ```sh
    $ ipfs init --profile server
    initializing IPFS node at /home/jitsejan/.ipfs
    generating 2048-bit RSA keypair...done
@@ -77,7 +77,7 @@ In this article I will upload a static website to [IPFS](https://ipfs.io) to get
 
 3. Verify the peers that are connected.
 
-   ```bash
+   ```sh
    $ ipfs swarm peers
    /ip4/104.131.131.82/tcp/4001/p2p/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ
    /ip4/111.229.117.28/tcp/4001/p2p/QmXUKFSAKB4K9mSVMmtjJw55CkcyXajwTLXdmxvTC4kYy6
@@ -96,19 +96,19 @@ In this article I will upload a static website to [IPFS](https://ipfs.io) to get
 
 4. Execute the sample test by adding a string to IPFS and querying it using curl. 
 
-   ```bash
-   $ hash=`echo "I <3 IPFS -$(whoami)" | ipfs add -q`
-   $ echo $hash
-   QmR8yeru6tqJis2WR5YV6xmgAQHTBwPKxN8DoJK7uhK4Z3
-   $ curl "https://ipfs.io/ipfs/$hash"
-   I <3 IPFS -jitsejan
-   ```
+```sh
+$ hash=`echo "I <3 IPFS -$(whoami)" | ipfs add -q`
+$ echo $hash
+QmR8yeru6tqJis2WR5YV6xmgAQHTBwPKxN8DoJK7uhK4Z3
+$ curl "https://ipfs.io/ipfs/$hash"
+I <3 IPFS -jitsejan
+```
 
 ## Create a basic website
 
 The website that we will upload has the following structure. I chose to use subfolders for `css` and `images` to make sure this is also supported by IPFS. In the future I want to upload more complex websites to IPFS, for example my personal blog that is statis website created using [Pelican](https://blog.getpelican.com). From my understanding of IPFS it is not possible to upload dynamic content at this point.
 
-```bash
+```sh
 ~/code/ipfs-static-website $
 ❯ tree
 .
@@ -163,13 +163,13 @@ body{
 }
 ```
 
-<center><img src="images/ipfs_local.png" width="400px" /></center>
+<center><img src="images/ipfs_local.png" width="600px" /></center>
 
 ## Add files to IPFS
 
 Now that the files have been created the website should be added to the filesystem. Run `ipfs add -r` in the folder that should be uploaded to recursively add the files to IPFS.
 
-```bash
+```sh
 ~/code/ipfs-static-website $
 ❯ ipfs add -r .
 added QmNfVVQsXyekrNiM2dK35oQXg2dGqQ97Gz2PDBxUH6Piqu ipfs-static-website/README.md
@@ -184,17 +184,17 @@ added Qmeg3LpczHYLWFhQ9htz6qjizkf2aPKm3qZEyW4autpo5u ipfs-static-website
 
 The `SITE_ID` would be `Qmeg3LpczHYLWFhQ9htz6qjizkf2aPKm3qZEyW4autpo5u` as it is the hash of the main folder (bottom element). Opening up the file browser in **IPFS desktop** and searching for the *QmHash* will show the files from the repository.
 
-<img src="images/ipfs_desktop_overview.png" alt="ipfs_desktop_overview" width="400px" />
+<center><img src="images/ipfs_desktop_overview.png" alt="ipfs_desktop_overview" width="600px" /></center>
 
 To confirm that the files are correct you can view the files. For example, you can navigate to images and open the `blockchain.jpg` to see the actual content.
 
-<img src="images/ipfs_desktop_detail.png" alt="ifps_desktop_detail" width="400px" />
+<center><img src="images/ipfs_desktop_detail.png" alt="ifps_desktop_detail" width="600px" /></center>
 
 ## Verify the content
 
 In the previous step we found the hash of the main folder of the website. Since the ipfs daemon is running, we can view the files locally by navigating to http://localhost;8080/ipfs/ and adding the hash. Opening the hash in the browser http://localhost:8080/ipfs/Qmeg3LpczHYLWFhQ9htz6qjizkf2aPKm3qZEyW4autpo5u/ will show the page as we expect:
 
-<img src="images/ipfs_local_ipfs.png" alt="ipfs_local_ipfs" width="400px" />
+<center><img src="images/ipfs_local_ipfs.png" alt="ipfs_local_ipfs" width="600px" /></center>
 
 ## Use IPNS to host content
 
@@ -207,7 +207,7 @@ Published to QmSztWC9dxLzUV7Ph5ZJLwhGW5aLRG2Pwptis3cw6cfK53: /ipfs/Qmeg3LpczHYLW
 
 The return value contains the hash for IPNS which again we can verify using our localhost.  The `$PEER_ID` will be *QmSztWC9dxLzUV7Ph5ZJLwhGW5aLRG2Pwptis3cw6cfK53* and can be appended to http://localhost:8080/ipns/.  Indeed, opening [http://localhost:8080/ipns/QmXwD1dj6ywm3pNQPY2vuEzjdxz1zvrnVe7DrJp56yBnPU/](http://localhost:8080/ipns/QmXwD1dj6ywm3pNQPY2vuEzjdxz1zvrnVe7DrJp56yBnPU/) shows again the basic website.
 
-<img src="images/ipfs_local_ipns.png" alt="ipfs_local_ipns" width="400px" />
+<center><img src="images/ipfs_local_ipns.png" alt="ipfs_local_ipns" width="600px" /></center>
 
 ## Setup DNS with Cloudflare
 
@@ -218,11 +218,11 @@ Cloudflare is a service I use for my DNS management and security of my website. 
 
 CNAME:
 
-<img src="images/ipfs_cloudflare_cname.png" alt="ipfs_cloudflare_cname" width="400px" />
+<center><img src="images/ipfs_cloudflare_cname.png" alt="ipfs_cloudflare_cname" width="400px" /></center>
 
 DNS link:
 
-<img src="images/ipfs_cloufdflare_txt.png" alt="ipfs_cloufdflare_txt" width="400px" />
+<center><img src="images/ipfs_cloufdflare_txt.png" alt="ipfs_cloufdflare_txt" width="400px" /></center>
 
 These settings can be verified with `dig`  by checking the answer to a call to `_dnslink.<subdomain>.<domain>`. This should return the `dnslink` with the correct IPFS hash. 
 
@@ -233,19 +233,19 @@ _dnslink.ipfs.jitsejan.com. 300	IN	TXT	"dnslink=/ipfs/Qmeg3LpczHYLWFhQ9htz6qjizk
 
 As an additional step we can add a certificate to the domain by navigating to https://www.cloudflare.com/distributed-web-gateway/ and scrolling down to the bottom:
 
-<img src="images/ipfs_cloudflare_ca.png" alt="ipfs_cloudflare_ca" width="400px" />
+<center><img src="images/ipfs_cloudflare_ca.png" alt="ipfs_cloudflare_ca" width="400px" /></center>
 
 After a few seconds this should complete:
 
-<img src="images/ipfs_cloudflare_ca_done.png" alt="ipfs_cloudflare_ca_done" width="400px" />
+<center><img src="images/ipfs_cloudflare_ca_done.png" alt="ipfs_cloudflare_ca_done" width="400px" /></center>
 
 Before checking if my domain is working I will verify the content on the IPFS server of Cloudflare. By navigating to https://cloudflare-ipfs.com/ipfs/Qmeg3LpczHYLWFhQ9htz6qjizkf2aPKm3qZEyW4autpo5u/ I can check if the website is available. Initially it showed me the right page, but without the image.
 
-<img src="images/ipfs_cloudflare_wait.png" alt="ipfs_cloudflare_wait" width="400px" />
+<center><img src="images/ipfs_cloudflare_wait.png" alt="ipfs_cloudflare_wait" width="400px" /></center>
 
 After waiting a couple of minutes the image shows too:
 
-<img src="images/ipfs_cloudflare_done.png" alt="ipfs_cloudflare_done" width="400px" />
+<center><img src="images/ipfs_cloudflare_done.png" alt="ipfs_cloudflare_done" width="400px" /></center>
 
 ## Setup ENS
 
@@ -255,15 +255,15 @@ Because I bought the domain on my phone using the Cipher Browser some time ago a
 
 Navigate to your `eth` domain page, for example https://app.ens.domains/name/jitsejan.eth, and by clicking the `+` under **Records** add the content with your IPFS link:
 
-<center><img src="images/ipfs_ens_overview.png" alt="ipfs_ens_overview" width="400px" /></center>
+<center><img src="images/ipfs_ens_overview.png" alt="ipfs_ens_overview" width="600px" /></center>
 
 Note: Adding content to the network will cost ~~money~~ gas! 
 
-<center><img src="images/ipfs_gas_cost.png" alt="ipfs_gas_cost" width="200px" /></center>
+<center><img src="images/ipfs_gas_cost.png" alt="ipfs_gas_cost" width="300px" /></center>
 
 After being very patience the website will be visible on http://jitsejan.eth.link. Note the `.link ` in the end to make sure the DNS can handle the content hosted on ENS (info: http://eth.link/). Viewing the page is free, so refreshing every second wouldn't cost you money. 
 
-<center><img src="images/ipfs_eth_link.png" alt="ipfs_eth_link" width="400px" /></center>
+<center><img src="images/ipfs_eth_link.png" alt="ipfs_eth_link" width="600px" /></center>
 
 ## Future work
 
@@ -273,7 +273,6 @@ After being very patience the website will be visible on http://jitsejan.eth.lin
 ## Sources
 
 - https://docs.ipfs.io/how-to/host-single-page-site/#create-your-site
-
 - https://www.cloudflare.com/distributed-web-gateway/
 
   
