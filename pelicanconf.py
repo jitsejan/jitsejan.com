@@ -54,7 +54,7 @@ PAGES = [
 	# {'url': 'pages/splunk-cheatsheet', 'title': 'Splunk cheatsheet'},
 		]
 
-ABOUT = """<p>I am the Head Of Data Engineering at <a href="https://marketfinance.com">MarketFinance</a> in London. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
+ABOUT = """<p>I am a Data Engineering Manager at <a href="https://www.sainsburys.co.uk">Sainsbury's Tech</a> in London. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
 <p>
 While I mainly work in Python, I try to experiment with different languages and frameworks when I can. Lately I have been experimenting with Javascript a bit more, since both
 for visualizations as for modern web applications it is the go-to language. 
@@ -68,8 +68,8 @@ ABOUT_IMG = "/theme/images/JJ_Montreal.png"
 GOOGLE_ANALYTICS_CODE = 'UA-86650752-1'
 GOOGLE_ANALYTICS_DOMAIN = 'www.jitsejan.com'
 
-TAG_CLOUD_STEPS = 4 	        # Count of different font sizes in the tag cloud.
-TAG_CLOUD_MAX_ITEMS = 20 	    # Maximum number of tags in the cloud.
+TAG_CLOUD_STEPS = 6 	        # Count of different font sizes in the tag cloud.
+TAG_CLOUD_MAX_ITEMS = 23 	    # Maximum number of tags in the cloud.
 TAG_CLOUD_SORTING = 'random' 	# The tag cloud ordering scheme. Valid values: random, alphabetically, alphabetically-rev, size and size-rev
 TAG_CLOUD_BADGE = False	        # Optional setting : can bring badges, which mean say : display the number of each tags present on all articles.' 
 
