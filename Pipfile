@@ -15,7 +15,6 @@ nbconvert = "*"
 Markdown = "*"
 fabric = "*"
 notebook = ">=5.7.8"
-encodings = "*"
 
 [requires]
 python_version = "3.7"
