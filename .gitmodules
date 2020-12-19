@@ -6,4 +6,4 @@
 	url = git://github.com/danielfrg/pelican-ipynb.git
 [submodule "output"]
 	path = output
-	url = https://github.com/jitsejan/jitsejan.github.io
+	url = https://github.com/jitsejan/jitsejan.github.io.git
