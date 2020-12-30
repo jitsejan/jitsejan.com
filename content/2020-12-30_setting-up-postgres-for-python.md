@@ -12,13 +12,11 @@ Summary: This tutorial describes how to set up PostgreSQL on Ubuntu and configur
 - Setup PostgreSQL on Ubuntu
 - Setup Python to connect to PostgreSQL
 
-## VPS information
-
-### Setup PostgreSQL
+## Setup PostgreSQL
 
 For this tutorial I will be installing PostgreSQL on my VPS running `Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-58-generic x86_64)`.
 
-## Ubuntu Packages
+### Ubuntu Packages
 
 Install the following packages to get PostgreSQL and Python running. I assume Python is already installed on the machine.
 
@@ -28,13 +26,13 @@ Install the following packages to get PostgreSQL and Python running. I assume Py
 - `libpq-dev`
 
 ```bash
-jitsejan@theviji:~$ sudo apt install postgresql \\
-                                     postgresql-client \\
-                                     postgresql-client-common \\
+jitsejan@theviji:~$ sudo apt install postgresql \
+                                     postgresql-client \
+                                     postgresql-client-common \
                                      libpq-dev
 ```
 
-## Verify PostgreSQL
+### Verify PostgreSQL
 
 The PostgreSQL server version can be verified with the `locate` tool which returns version `12`:
 
@@ -50,7 +48,7 @@ jitsejan@theviji:~$ psql -V
 psql (PostgreSQL) 12.5 (Ubuntu 12.5-0ubuntu0.20.04.1)
 ```
 
-## Create new user
+### Create new user
 
 After installing PostgreSQL I add a new user for the project I will be working on. First login with the default `postgres` user and use `createuser --interactive` to add a user. In my case I will do a project around Zelda and therefor create a new user `zelda`.
 
@@ -125,7 +123,7 @@ zelda=> \conninfo
 You are connected to database "zelda" as user "zelda" via socket in "/var/run/postgresql" at port "5432".
 ```
 
-## Configure PostgreSQL for Python
+### Configure PostgreSQL for Python
 
 The important part to get PostgreSQL working with Python remotely is to make sure PostgreSQL allows external IPs. Modify the `postgresql.conf` that should be located in `/etc/postgresql/12/main`.
 
