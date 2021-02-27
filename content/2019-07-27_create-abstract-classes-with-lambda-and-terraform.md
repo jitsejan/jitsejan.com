@@ -54,11 +54,11 @@ I will use the public gaming database from [IGDB: Free Video Game Database API](
 
 First I hit the `platform` endpoint to retrieve the ID for the *N64* platform.
 
-![](images/postman_get_platform.png)
+<img src="images/postman_get_platform.png" />
 
 Second I hit the games endpoint to filter for N64 games that contain Mario in the name.
 
-![](images/postman_get_games.png)
+<img src="images/postman_get_games.png" />
 
 
 ## Implementation
@@ -1087,11 +1087,11 @@ Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
 ##### Results
 Overview of the two Lambda functions:
 
-![](images/lambda_overview.png)
+<img src="images/lambda_overview.png" />
 
 Running the Lambda function:
 
-![](images/lambda_execution.png)
+<img src="images/lambda_execution.png" />
 
 ## Conclusion
 Using abstract classes makes it easier to create complex software, even when running serverless code on AWS. By using these type of classes you can enforce the developer that creates a new concrete class to implement all the necessary methods and properties to ensure code consistency. The approach in my team would be to create all classes as part of one Lambda layer that contains the Python module with the different abstract classes (APIConnector, FTPConnector, etc) and all concrete classes (CompaniesHouseApiConnector, ExperianApiConnector, etc). The Lambda functions to execute the actual data crawl can remain short and simple making it more scalable and flexible to add new endpoints and therefore new datasets to the data lake.
@@ -1099,4 +1099,3 @@ Using abstract classes makes it easier to create complex software, even when run
 
 ## Reference
 [GitHub - jitsejan/abstract-lambdas-terraform](https://github.com/jitsejan/abstract-lambdas-terraform.git)
-
