@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from pelican_jupyter import markup as nb_markup
 import os
 
 AUTHOR = u'Jitse-Jan'
@@ -27,7 +28,7 @@ RELATIVE_URLS = True
 THEME = 'themes/middle-theme'
 PLUGIN_PATHS = ['plugins']
 #PLUGINS = ['liquid_tags.literal', 'assets', "tag_cloud", 'tipue_search', 'ipynb.markup']
-PLUGINS = [ 'assets', "tag_cloud", 'tipue_search']
+PLUGINS = [ 'assets', "tag_cloud", 'tipue_search', nb_markup]
 
 DELETE_OUTPUT_DIRECTORY = False
 EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None
@@ -77,4 +78,5 @@ TAG_CLOUD_BADGE = False	        # Optional setting : can bring badges, which mea
 TIPUE_SEARCH = True
 DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'authors', 'archives', 'search'))
 
-MARKUP = ('md', 'ipynb')
+MARKUP = ("md", "ipynb")
+IGNORE_FILES = [".ipynb_checkpoints"]

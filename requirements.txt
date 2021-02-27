@@ -1,7 +1,7 @@
-BeautifulSoup4
-fabric3
-ipython
-markdown
-pelican
-webassets
-nbconvert
+beautifulsoup4==4.9.3
+Fabric3==1.14.post1
+ipython==7.16.1
+Markdown==3.3.4
+pelican==4.5.4
+webassets==2.0
+nbconvert==5.6.0
