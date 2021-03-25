@@ -5,11 +5,11 @@ Category: posts
 Tags: Python, boto3, AWS, IAM
 Slug: assume-role-with-boto3-in-python
 Authors: Jitse-Jan
-Summary:
+Summary: 
 
 The following script will use the `jjmain` profile defined in `~/.aws/credentials` and retrieve a session token after a MFA token is provided. With the session token the `admin-role` can be assumed and data from the AWS Cost Explorer is retrieved.
 
-```
+```python
 from datetime import datetime, timedelta
 
 import boto3
