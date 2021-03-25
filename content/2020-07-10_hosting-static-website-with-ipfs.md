@@ -270,9 +270,5 @@ After being very patience the website will be visible on [http://jitsejan.eth.li
 
 ## Sources
 
-- https://docs.ipfs.io/how-to/host-single-page-site/#create-your-site
-- https://www.cloudflare.com/distributed-web-gateway/
-
-  
-
-  
+- [https://docs.ipfs.io/how-to/host-single-page-site/#create-your-site](https://docs.ipfs.io/how-to/host-single-page-site/#create-your-site)
+- [https://www.cloudflare.com/distributed-web-gateway/](https://www.cloudflare.com/distributed-web-gateway/)
