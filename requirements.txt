@@ -22,4 +22,4 @@ jupyter-console==6.4.0
 jupyter-core==4.7.1
 jupyterlab-pygments==0.1.2
 jupyterlab-widgets==1.0.0
-pelican_jupyter==0.10.0
+pelican_jupyter==0.10.0bs4==0.0.1
