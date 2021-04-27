@@ -165,7 +165,8 @@ article blockquote {
 }
 article img {
     max-width: 100%;
-    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
 article code {
     border: 1px solid #ccc;
