@@ -33,7 +33,7 @@ First of all, I create a [new project]([Start your project](https://app.supabase
 
 After a quick coffee the project will be ready and the database and API are ready to use.
 
-<img src="/Users/jitse-jan.vanwaterschoot/Desktop/Screenshot 2021-03-31 at 11.27.43.png" alt="Screenshot 2021-03-31 at 11.27.43" style="zoom:33%;" />
+<img src="images/supabase_starting.PNG" alt="Screenshot 2021-03-31 at 11.27.43" style="zoom:33%;" />
 
 Once the database is ready I create a new table.
 
@@ -49,7 +49,7 @@ For simplicity I add a `id`, `word` and `definition` column. Very impressive ind
 
 Finally, now that the table is created we need to copy the API key to be able to connect to the database and start inserting some data. Go the *Settings > API* and copy the `url` and `key`.
 
-<img src="/Users/jitse-jan.vanwaterschoot/code/jitsejan.com/content/images/supabasee_api.png" alt="image-20210427011533887" style="zoom:33%;" />
+<img src="images/supabasee_api.png" alt="image-20210427011533887" style="zoom:33%;" />
 
 ### Pythonista
 
