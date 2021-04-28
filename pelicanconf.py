@@ -27,7 +27,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 THEME = 'themes/middle-theme'
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ["tag_cloud", 'tipue_search', nb_markup]
+PLUGINS = ["tipue_search"]#["tag_cloud", 'tipue_search', nb_markup]
 
 DELETE_OUTPUT_DIRECTORY = False
 EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None
@@ -54,7 +54,7 @@ PAGES = [
 	# {'url': 'pages/splunk-cheatsheet', 'title': 'Splunk cheatsheet'},
 		]
 
-ABOUT = """<p>I am the Head Of Data at <a href="https://www.lendinvest.com">LendInvest</a> in London. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
+ABOUT = """<p>I am the Head of Data at <a href="https://www.lendinvest.com">LendInvest</a> in London. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
 <p>
 While I mainly work in Python, I try to experiment with different languages and frameworks when I can. Lately I have been experimenting with Javascript a bit more, since both
 for visualizations as for modern web applications it is the go-to language. 
