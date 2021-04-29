@@ -1,13 +1,6 @@
 {% if TIPUE_SEARCH %}
-<form class="navbar-form navbar-right" role="search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
-  <div class="form-group">
-    <div class="input-group">
-      <input type="text" name="q" id="tipue_search_input" class="form-control search-query" placeholder="Search" required />
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="submit"><i class="fa
-            fa-search fa-fw"></i></button>
-      </span>
-    </div>
-  </div>
+<form class="d-flex" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+  <input id="tipue_search_input" class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search" required>
+  <input type="image" src="/theme/images/Pipe_up.gif" border="0" alt="Submit" class="submit-image"/>
 </form>
 {% endif %}

@@ -52,7 +52,7 @@ header.main-header .container {
 header.main-header .container nav a:hover {
     background-color: #6699ff;
 }
-.navbar-default {
+.navbar {
     background-color: #6699ff;
     border: 0px;
     background-image: url('/theme/images/Bar.GIF');
@@ -61,34 +61,34 @@ header.main-header .container nav a:hover {
     padding: 10px 0px 20px 0px;
     border-radius: 0px;
 }
-.navbar-default .navbar-brand {
+.navbar .navbar-brand {
     color: #fff;
     margin-top: 3px;
     font-weight: bold;
 }
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+.navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
     color: #fff;
     background-color: none;
 }
-.navbar-default .navbar-nav > li a {
+.navbar .navbar-nav > li a {
     color: #fff;
 }
-.navbar-default .navbar-nav > li a.active {
+.navbar .navbar-nav > li a.active {
     background-color: white;
 }
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+.navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:focus, .navbar .navbar-nav>.active>a:hover {
     background-color: #6699ff;
 }
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus {
     color: #fff;
     background-color: #6699ff;
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:hover, .navbar .navbar-nav > .active > a:focus {
     color: #fff;
     background-color: #6699ff;
     font-weight: bold;
 }
-.navbar-default .navbar-nav > li > img.mario-img {
+.navbar .navbar-nav > li > img.mario-img {
     display: none;
     margin: 0px auto -4px auto;
     height: 16px;
@@ -97,11 +97,11 @@ header.main-header .container nav a:hover {
     margin-bottom: 48px;
 }
 @media screen and (min-width: 768px) {
-    .navbar-default .navbar-nav > li.active > img.mario-img {
+    .navbar .navbar-nav > li.active > img.mario-img {
         display: block;
    }
 }
-.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:visited, .navbar-default .navbar-toggle:active {
+.navbar .navbar-toggle, .navbar .navbar-toggle:focus, .navbar .navbar-toggle:visited, .navbar .navbar-toggle:active {
     border: none;
     background-color: none;
 }
@@ -111,11 +111,23 @@ header.main-header .container nav a:hover {
     margin-top: -10px;
     margin-right: 16px;
 }
-.navbar-default .navbar-toggle:hover {
+.navbar .navbar-toggle:hover {
     background-color: #6699ff;
 }
+.navbar .submit-image{
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    width: 32px;
+    height: 32px;
+    margin-top: -11px;
+}
+
 article {
-    margin: 0;
+    margin: 10px 40px 10px 10px;
 }
 article header {
     margin-bottom: 20px;
@@ -329,6 +341,7 @@ article .meta a.read_more:hover, article .meta a.comments_btn:hover {
     overflow: hidden;
     border-radius: 50%;
     margin: 50px auto;
+    --bs-gutter-x: 0;
 }
 #sidebar-about img {
     transform: translate(-50%);
@@ -431,11 +444,10 @@ http://www.tipue.com/search
      color: #333;     
      -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-     width: 230px;
-     background-color: #f3f3f3;
+     width: 130px;
      border: none;
      padding: 9px 0 10px 18px;
-     height: 56px;
+     /* height: 56px; */
      border-radius: 3px;
 	-moz-appearance: none;
 	-webkit-appearance: none;
