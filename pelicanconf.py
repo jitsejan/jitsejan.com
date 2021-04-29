@@ -27,7 +27,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 THEME = 'themes/middle-theme'
 PLUGIN_PATHS = ['plugins', 'custom']
-PLUGINS = ["tipue_search", "tag_cloud", 'tipue_search', nb_markup, "createjson"]
+PLUGINS = ["tipue_search", "tag_cloud", nb_markup, "createjson"]
 
 DELETE_OUTPUT_DIRECTORY = False
 EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None
