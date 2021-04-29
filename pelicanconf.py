@@ -26,8 +26,8 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 THEME = 'themes/middle-theme'
-PLUGIN_PATHS = ['plugins']
-PLUGINS = ["tipue_search"]#["tag_cloud", 'tipue_search', nb_markup]
+PLUGIN_PATHS = ['plugins', 'custom']
+PLUGINS = ["tipue_search", "tag_cloud", 'tipue_search', nb_markup, "createjson"]
 
 DELETE_OUTPUT_DIRECTORY = False
 EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None

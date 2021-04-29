@@ -230,9 +230,6 @@ article .meta a.read_more:hover, article .meta a.comments_btn:hover {
     color: #FFF;
     background: #6699ff;
 }
-.index {
-    max-width: 1200px;
-}
 .index article header h2 {
     font-size: 36px;
     margin-bottom: 2px;

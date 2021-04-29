@@ -157,7 +157,7 @@ http://www.tipue.com/search
                                    }
                               }
                               d_w = d_t.split(' ');
-
+                              console.log(tipuesearch);
                               for (var i = 0; i < tipuesearch.pages.length; i++)
                               {
                                    var score = 0;
