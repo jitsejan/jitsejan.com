@@ -26,7 +26,7 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 THEME = 'themes/middle-theme'
-PLUGIN_PATHS = ['plugins'']
+PLUGIN_PATHS = ['plugins']
 PLUGINS = ["tipue_search", "tag_cloud", nb_markup]
 
 DELETE_OUTPUT_DIRECTORY = False
