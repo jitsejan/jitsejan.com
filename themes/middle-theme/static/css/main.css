@@ -24,6 +24,16 @@ a:hover {
     color: #6699ff;
     text-decoration: none;
 }
+/*a.prev, a.next{
+    background-image: url('/theme/images/Pipe_left_up.GIF');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    width: 96px;
+    height: 80px;
+}
+a.next{
+    background-image: url('/theme/images/Pipe_up_right.GIF');
+}*/
 #wrap {
     min-height: 100%;
 }
@@ -58,8 +68,9 @@ header.main-header .container nav a:hover {
     background-image: url('/theme/images/Bar.GIF');
     background-repeat: repeat-x;
     background-position: bottom;
-    padding: 10px 0px 20px 0px;
+    padding: 10px 0px 16px 0px;
     border-radius: 0px;
+    margin-bottom: 48px;    
 }
 .navbar .navbar-brand {
     color: #fff;
@@ -93,9 +104,6 @@ header.main-header .container nav a:hover {
     margin: 0px auto -4px auto;
     height: 16px;
 }
-.navbar {
-    margin-bottom: 48px;
-}
 @media screen and (min-width: 768px) {
     .navbar .navbar-nav > li.active > img.mario-img {
         display: block;
@@ -123,7 +131,8 @@ header.main-header .container nav a:hover {
     outline: inherit;
     width: 32px;
     height: 32px;
-    margin-top: -11px;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
 }
 
 article {
@@ -446,8 +455,8 @@ http://www.tipue.com/search
 	-moz-osx-font-smoothing: grayscale;
      width: 130px;
      border: none;
-     padding: 9px 0 10px 18px;
-     /* height: 56px; */
+     padding: 9px 0 9px 18px;
+      height: 24px; 
      border-radius: 3px;
 	-moz-appearance: none;
 	-webkit-appearance: none;
