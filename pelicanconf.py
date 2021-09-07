@@ -35,24 +35,18 @@ NOTEBOOK_DIR = 'notebooks'
 LOAD_CONTENT_CACHE = False
 
 DISPLAY_PAGES_ON_MENU = True
-FLICKR_USERNAME = 'jitsejan'
 LINKEDIN_USERNAME = 'jitsejan'
-SPOTIFY_USERNAME = 'jitsejan'
 TWITTER_USERNAME = 'jitsejan'
-BITBUCKET_USERNAME = 'jitsejan'
 GITHUB_USERNAME = 'jitsejan'
-BLOCKS_USERNAME = 'jitsejan'
 DOCKER_USERNAME = 'jitsejan'
 
 TYPOGRIFY = False
 PAGE_PATHS = ['pages']
 PAGES = [
-    # {'url': 'pages/latex-cheatsheet', 'title': 'Latex cheatsheet'},
-	{'url': 'pages/pandas-cheatsheet', 'title': 'Pandas cheatsheet'},
+    {'url': 'pages/pandas-cheatsheet', 'title': 'Pandas cheatsheet'},
 	{'url': 'pages/python-cheatsheet', 'title': 'Python cheatsheet'},
 	{'url': 'pages/spark-cheatsheet', 'title': 'Spark cheatsheet'},
-	# {'url': 'pages/splunk-cheatsheet', 'title': 'Splunk cheatsheet'},
-		]
+]
 
 ABOUT = """<p>I am the Head of Data at <a href="https://www.lendinvest.com">LendInvest</a> in London. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
 <p>
@@ -60,7 +54,7 @@ While I mainly work in Python, I try to experiment with different languages and 
 for visualizations as for modern web applications it is the go-to language. 
 </p>
 <p>
-I am using this page as a portfolio and showcase, but mainly as a cheatsheet. That is why you will mainly find shell commands, short scripts or notebooks just for myself to not reinvent the wheel.
+I am using this page as a portfolio and showcase, cheatsheet but mainly a historical record. That is why you will mainly find shell commands, short scripts or notebooks just for myself to not reinvent the wheel.
 </p>
 """
 ABOUT_IMG = "/theme/images/JJ_Montreal.png"
