@@ -3,7 +3,7 @@ docutils
 feedgenerator
 importlib-metadata
 invoke
-Jinja2
+Jinja2==2.11.3
 Markdown
 MarkupSafe
 nbconvert==5.6.0
