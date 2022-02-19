@@ -1,0 +1,8 @@
+Title: Getting started with Great Expectations
+Date: 2022-02-19 02:27
+Modified: 2022-02-19 02:27
+Category: posts
+Tags: notebook, Python, Jupyter, Great Expectations, testing, data testing
+Slug: getting-started-with-great-expectations
+Authors: Jitse-Jan
+Summary: This notebook describes an experiment to get to know Great Expectations better. In the approach below we will use the core API rather than the configuration option for the expectations.
