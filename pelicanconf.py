@@ -35,10 +35,8 @@ NOTEBOOK_DIR = 'notebooks'
 LOAD_CONTENT_CACHE = False
 
 DISPLAY_PAGES_ON_MENU = True
-LINKEDIN_USERNAME = 'jitsejan'
 TWITTER_USERNAME = 'jitsejan'
 GITHUB_USERNAME = 'jitsejan'
-DOCKER_USERNAME = 'jitsejan'
 
 TYPOGRIFY = False
 PAGE_PATHS = ['pages']
