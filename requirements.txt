@@ -5,7 +5,7 @@ invoke
 Jinja2==2.11.3
 Markdown
 markupsafe==2.0.1
-nbconvert==5.6.0
+nbconvert==6.3.0
 notebook==6.4.10
 pelican
 Pygments
