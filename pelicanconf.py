@@ -46,7 +46,7 @@ PAGES = [
 	{'url': 'pages/spark-cheatsheet', 'title': 'Spark cheatsheet'},
 ]
 
-ABOUT = """<p>I am lead data engineer with over 15 years of working with data. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
+ABOUT = """<p>I am a lead data engineer with over 15 years of working with data. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
 <p>
 While I mainly work in Python, I try to experiment with different languages and frameworks when I can. Lately I have been experimenting with AWS and Terraform since apart from data skills I want to stay on top of new developments within DevOps.
 </p>
