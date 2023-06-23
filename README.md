@@ -1,6 +1,6 @@
 # README #
 
-## Why Pelican? ##
+## Why Pelican? 
 I choose Pelican because I was looking for a static web framework with support for displaying Jupyter notebooks inline with Markdown documents.
 
 ## Ingredients
