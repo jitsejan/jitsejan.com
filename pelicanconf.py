@@ -46,10 +46,9 @@ PAGES = [
 	{'url': 'pages/spark-cheatsheet', 'title': 'Spark cheatsheet'},
 ]
 
-ABOUT = """<p>I am the Head of Data at <a href="https://www.lendinvest.com">LendInvest</a> in London. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
+ABOUT = """<p>I am lead data engineer with over 15 years of working with data. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
 <p>
-While I mainly work in Python, I try to experiment with different languages and frameworks when I can. Lately I have been experimenting with Javascript a bit more, since both
-for visualizations as for modern web applications it is the go-to language. 
+While I mainly work in Python, I try to experiment with different languages and frameworks when I can. Lately I have been experimenting with AWS and Terraform since apart from data skills I want to stay on top of new developments within DevOps.
 </p>
 <p>
 I am using this page as a portfolio and showcase, cheatsheet but mainly a historical record. That is why you will mainly find shell commands, short scripts or notebooks just for myself to not reinvent the wheel.
