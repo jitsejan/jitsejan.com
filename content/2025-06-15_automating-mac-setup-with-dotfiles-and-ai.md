@@ -11,7 +11,7 @@ In the past, setting up a new machine meant spending a whole weekend downloading
 
 I created a [dotfiles repository](https://github.com/jitsejan/dotfiles) that provisions my entire working environment from scratch with just a single command. It is not a novel concept, but it has completely streamlined my workflow.
 
-## The Core Philosophy
+## The core philosophy
 
 The goal was simple: clone the repository and run a bootstrap script. The script should handle everything from package management to symlinking configuration files, without requiring manual intervention.
 
@@ -21,7 +21,7 @@ My current setup revolves around a few key technologies:
 - **Package Management:** Homebrew paired with a `Brewfile`.
 - **Python Ecosystem:** A heavy focus on modern tooling like `uv`, `Rye`, `Ruff`, and `pyright`.
 
-## The Bootstrap Process
+## The bootstrap process
 
 The entry point of my setup is a `bootstrap.sh` script. When executed, it acts as an orchestrator that triggers a series of focused, modular scripts located in the `scripts/` directory.
 
@@ -33,22 +33,22 @@ The heavy lifting of software installation is handled by Homebrew. Instead of wr
 
 By keeping the `Brewfile` tracked in git, I have a single source of truth for all my installed software.
 
-### 2. Configuration Symlinking
+### 2. Configuration symlinking
 Instead of copying files into system directories, the setup scripts create symlinks from my `dotfiles/.config/` folder to my user's `~/.config/` directory. This means whenever I tweak my Starship prompt (`starship.toml`), update my Fish shell functions, or modify my Kitty configuration, the changes are tracked in my Git repository instantly.
 
-### 3. Application-Specific Setup
+### 3. Application-specific setup
 Some configurations require more than just installing a package. For these, I wrote dedicated setup scripts:
 - `setup_dock.sh`: Automatically clears the macOS default dock and pins only my essential applications using `dockutil`.
 - `install_python_tools.sh`: Bootstraps my Python environment.
 - Various setup scripts for tools like PostgreSQL, Terraform, Docker, and Git Filter Repo to ensure they are configured exactly how I like them out of the box.
 
-## AI-Powered Workflow with Claude Code
+## AI-powered workflow with Claude Code
 
 Beyond just installing applications, I've deeply integrated AI into my development workflow from day one. Using **Claude Code** within my terminal, I've automated much of the tedious repository management that usually slows down engineering. 
 
 Instead of manually clicking through web interfaces, I prompt Claude from my CLI to understand my codebase, generate tickets, scaffold out new features, create pull requests, and even handle PR merges. Having an autonomous AI pairing partner that lives natively inside the environment that my dotfiles just provisioned is a massive productivity multiplier.
 
-## The Result
+## The result
 
 Now, whenever I need to set up a new Mac, the process looks like this:
 
