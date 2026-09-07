@@ -54,7 +54,7 @@ While I mainly work in Python, I try to experiment with different languages and 
 I am using this page as a portfolio and showcase, cheatsheet but mainly a historical record. That is why you will mainly find shell commands, short scripts or notebooks just for myself to not reinvent the wheel.
 </p>
 """
-ABOUT_IMG = "/theme/images/JJ_Montreal.png"
+ABOUT_IMG = "/theme/images/github_avatar.png"
 
 GOOGLE_ANALYTICS_CODE = 'UA-86650752-1'
 GOOGLE_ANALYTICS_DOMAIN = 'www.jitsejan.com'
