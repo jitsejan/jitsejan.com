@@ -46,22 +46,25 @@ PAGES = [
 	{'url': 'pages/spark-cheatsheet', 'title': 'Spark cheatsheet'},
 ]
 
-ABOUT = """<p>I am a lead data engineer with over 15 years of working with data. I have a passion for the field of machine learning, pattern recognition, big data, blockchain and ubiquitous computing.</p>
+ABOUT = """<p>I'm Jitse-Jan, a data lead based in London working across data platforms, orchestration, and analytics engineering: dbt, Dagster, Snowflake, dlt, and DuckDB, with Python underneath most of it.</p>
 <p>
-While I mainly work in Python, I try to experiment with different languages and frameworks when I can. Lately I have been experimenting with AWS and Terraform since apart from data skills I want to stay on top of new developments within DevOps.
+Lately that also means working AI-assisted day to day, using Claude alongside a structured note-taking setup to keep multiple projects straight.
 </p>
 <p>
-I am using this page as a portfolio and showcase, cheatsheet but mainly a historical record. That is why you will mainly find shell commands, short scripts or notebooks just for myself to not reinvent the wheel.
+This blog goes back to 2016. There's a real gap in the middle, a long stretch of heads-down client work rather than writing, but the interest never stopped, and the more recent posts pick up where the site left off.
+</p>
+<p>
+I use this page as a portfolio, cheatsheet, and historical record. Expect shell commands, working examples, and write-ups of things I built, mostly so I don't have to reinvent the wheel next time.
 </p>
 """
-ABOUT_IMG = "/theme/images/JJ_Montreal.png"
+ABOUT_IMG = "/theme/images/github_avatar.png"
 
 GOOGLE_ANALYTICS_CODE = 'UA-86650752-1'
 GOOGLE_ANALYTICS_DOMAIN = 'www.jitsejan.com'
 
 TAG_CLOUD_STEPS = 6 	        # Count of different font sizes in the tag cloud.
-TAG_CLOUD_MAX_ITEMS = 23 	    # Maximum number of tags in the cloud.
-TAG_CLOUD_SORTING = 'random' 	# The tag cloud ordering scheme. Valid values: random, alphabetically, alphabetically-rev, size and size-rev
+TAG_CLOUD_MAX_ITEMS = 18 	    # Maximum number of tags in the cloud.
+TAG_CLOUD_SORTING = 'size-rev' 	# The tag cloud ordering scheme. Valid values: random, alphabetically, alphabetically-rev, size and size-rev
 TAG_CLOUD_BADGE = False	        # Optional setting : can bring badges, which mean say : display the number of each tags present on all articles.' 
 
 TIPUE_SEARCH = True

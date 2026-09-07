@@ -2,7 +2,7 @@ Title: Install Django on Ubuntu 14.04 with virtualenv, Nginx, Gunicorn and postg
 Date: 2016-10-04 09:46
 Modified: 2017-03-27 16:59
 Category: posts
-Tags: Ubuntu, Django, Nginx, Gunicorn, postgres, virtualenv
+Tags: Ubuntu, Django, Nginx, Gunicorn, PostgreSQL, virtualenv
 Slug: install-django-ubuntu-1404-virtualenv-nginx-gunicorn-and-postgres
 Authors: Jitse-Jan
 Summary: A description of the steps needed to get Django working on Ubuntu 14.04.

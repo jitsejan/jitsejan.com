@@ -2,7 +2,7 @@ Title: Setting up a Dapp with Truffle and Metamask
 Date: 2017-05-11 23:09
 Modified: 2017-05-11 23:09
 Category: posts
-Tags: ether, ethereum, Truffle, Metamask, blockchain
+Tags: ethereum, Truffle, Metamask, blockchain
 Slug: creating-dapp-with-truffle-and-metamask
 Authors: Jitse-Jan
 Summary: Inspired by the [article](https://medium.com/metamask/developing-ethereum-dapps-with-truffle-and-metamask-aa8ad7e363ba) by [Dan Finlay](https://twitter.com/danfinlay) and the [video](https://www.youtube.com/watch?v=muWuHIPeXb4) by [Tim Coulter](https://twitter.com/timothyjcoulter), I had my first attempt creating the scaffold for a Truffle application and checking it with Metamask.

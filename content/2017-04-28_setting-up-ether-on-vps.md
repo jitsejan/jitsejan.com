@@ -2,7 +2,7 @@ Title: Setting up Ether on my VPS
 Date: 2017-04-28 18:34
 Modified: 2017-04-28 18:34
 Category: posts
-Tags: vps, ether, ethereum, Linux, geth, blockchain
+Tags: vps, ethereum, Linux, geth, blockchain
 Slug: setting-up-ether-on-vps
 Authors: Jitse-Jan
 Summary: My first step in getting to know the Ether platform is installing it on one of my Linux machines.
