@@ -1,22 +1,23 @@
-Title: Obsidian vs Claude: keeping context straight across multiple projects
+Title: Obsidian, Claude, and agile-ai: my weekly workflow
 Date: 2026-09-14 10:00
 Modified: 2026-09-14 10:00
 Category: posts
-Tags: obsidian, claude, AI, productivity, note-taking, workflow
+Tags: obsidian, claude, AI, productivity, note-taking, workflow, dbt, duckdb, dlt
 Slug: obsidian-vs-claude-multi-project-context
 Authors: Jitse-Jan
-Summary: How I split responsibilities between Obsidian and Claude so switching between projects doesn't mean re-explaining everything from scratch.
+Summary: How I split responsibilities between Obsidian, Claude, and a small dlt + dbt + DuckDB pipeline so switching between projects doesn't mean re-explaining everything from scratch, and my weekly review is backed by real data instead of memory.
 
-I usually have several projects going at once, each with its own codebase, its own people, and its own half-finished threads. The hard part was never doing the work, it was picking it back up after two days away and remembering exactly where I left it. Obsidian and Claude Code turned out to solve two different halves of that problem, and the trick was not blurring the line between them.
+I usually have several projects going at once, each with its own codebase, its own people, and its own half-finished threads. The hard part was never doing the work, it was picking it back up after two days away and remembering exactly where I left it, and knowing what actually happened over a given week without relying on memory. Three tools ended up splitting that problem cleanly: Obsidian holds state, Claude does the work, and a small pipeline I built called [agile-ai](https://github.com/jitsejan/agile-ai) turns raw ticket activity into the numbers behind my weekly review.
 
-## Two different jobs
+## Three different jobs
 
-Obsidian is where state lives. Claude is where work happens. If I mix those up, either my vault turns into a code editor I fight with, or my AI sessions turn into something that forgets everything the moment the context window resets.
+Obsidian is where state lives. Claude is where work happens. agile-ai is where the facts come from. If I mix those up, either my vault turns into a code editor I fight with, or my AI sessions turn into something that forgets everything the moment the context window resets, or my weekly review turns into "I think I did a lot this week" instead of an actual number.
 
 - **Obsidian** holds the things that are true independent of any single session: decisions made, who owns what, what's blocked on whom, what changed and why.
 - **Claude** does the actual work inside that context: reading code, writing code, drafting messages, running commands.
+- **agile-ai** answers the question neither of the above can: what actually shipped, and how does this week compare to the last one.
 
-The vault doesn't replace my memory of a project. It replaces re-explaining the project to a fresh AI session every single time.
+The vault doesn't replace my memory of a project. It replaces re-explaining the project to a fresh AI session every single time. And the pipeline doesn't replace the vault, it feeds it, so the weekly note isn't just prose, it's prose backed by a query.
 
 ## One handoff file per project, not per session
 
@@ -45,6 +46,25 @@ The filter I use:
 
 Meeting notes and transcripts still get exported into per-project folders, but they're reference material, not the thing a new session reads first. The handoff file is the thing a new session reads first, because it's already been distilled.
 
+## Where the weekly numbers actually come from
+
+The vault is good at holding decisions and blockers, but it's a bad place to answer "how many tickets did I actually close this week" or "is this sprint slower than the last three." That's not a note-taking problem, it's a data problem, so I built [agile-ai](https://github.com/jitsejan/agile-ai) to solve it separately instead of trying to fake it in markdown.
+
+It's a small [dlt](https://dlthub.com/) pipeline that pulls issues, sprints, comments, and issue history straight from the Jira API into [MotherDuck](https://motherduck.com/) (DuckDB in the cloud), then [dbt](https://www.getdbt.com/) reshapes it through a bronze/silver/gold layering:
+
+- **Silver** cleans the raw Jira payloads into `issues` and `sprints` tables.
+- **Gold** turns those into the models a weekly review actually needs: `sprint_velocity`, `sprint_carryover`, `team_member_performance`, `personal_activity`, `ticket_aging`.
+
+The dashboards on top (Evidence.dev, with a Superset setup as an alternative) are almost an afterthought at that point. Once `sprint_velocity` and `personal_activity` exist as gold tables, the hard part is done, the visualization layer is just SQL against DuckDB.
+
+Running it end to end is one command:
+
+```bash
+make refresh   # dlt fetch from Jira, then dbt run
+```
+
+The output feeds two things: a dashboard I glance at, and the actual weekly note in the vault. Instead of writing "had a productive sprint" from memory, the weekly note can say what the `sprint_velocity` and `ticket_aging` models actually show. Obsidian still holds the narrative, agile-ai just makes sure the narrative isn't guessing.
+
 ## Why this beats one giant context
 
 The obvious alternative is to just paste everything into a session and let the model figure out what matters. That works until you're juggling more than one project, at which point every session either drowns in irrelevant history from other work, or starts from zero because you didn't want to paste all of it.
@@ -53,6 +73,8 @@ Splitting by project folder in the vault means each project's context is exactly
 
 ## The result
 
-Switching projects now looks like this: open the vault folder for the project, point a new session at its handoff file, and continue. No re-explaining who's who, no re-deriving decisions that were already made two weeks ago. The vault remembers so the AI session doesn't have to guess, and the AI session does the work so the vault doesn't have to become a second codebase.
+Switching projects now looks like this: open the vault folder for the project, point a new session at its handoff file, and continue. No re-explaining who's who, no re-deriving decisions that were already made two weeks ago. Once a week, `make refresh` pulls the latest ticket activity so the weekly note is written against actual numbers instead of a vague sense of how the week went.
 
-If you're running more than one AI-assisted project at a time, the biggest lever isn't a smarter prompt, it's a place outside the session where the state of each project actually lives.
+Three tools, three narrow jobs: the vault remembers so the AI session doesn't have to guess, the AI session does the work so the vault doesn't have to become a second codebase, and the pipeline measures so the weekly note doesn't have to rely on memory.
+
+If you're running more than one AI-assisted project at a time, the biggest lever isn't a smarter prompt, it's separating where state lives, where work happens, and where the numbers come from, and not letting any one of them try to do the other two jobs.
