@@ -2,7 +2,7 @@ Title: Creating a simple REST API with Flask and SQLAlchemy
 Date: 2021-01-19 01:17
 Modified: 2021-01-19 01:17
 Category: posts
-Tags: Python, postgres, PostgreSQL, SQLAlchemy, Flask, REST, API
+Tags: Python, PostgreSQL, SQLAlchemy, Flask, REST, API
 Slug: creating-simple-rest-api-with-flask-and-sqlalchemy
 Authors: Jitse-Jan
 Summary: As a third tutorial in my Postgres related articles I am creating a basic REST API to retrieve data through Flask and SQLAlchemy from the Postgres database.

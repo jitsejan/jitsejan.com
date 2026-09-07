@@ -2,7 +2,7 @@ Title: Setting up PostgreSQL for Python
 Date: 2020-12-30 16:55
 Modified: 2020-12-30 16:55
 Category: posts
-Tags: Python, postgres, PostgreSQL, SQLAlchemy, Ubuntu
+Tags: Python, PostgreSQL, SQLAlchemy, Ubuntu
 Slug: setting-up-postgres-for-python
 Authors: Jitse-Jan
 Summary: This tutorial describes how to set up PostgreSQL on Ubuntu and configure it to make it connect with Python. 

@@ -2,7 +2,7 @@ Title: Setting up a private Ethereum blockchain
 Date: 2017-05-01 10:19
 Modified: 2017-05-01 10:19
 Category: posts
-Tags: vps, ether, ethereum, Linux, geth, blockchain
+Tags: vps, ethereum, Linux, geth, blockchain
 Slug: setting-up-private-ethereum-blockchain
 Authors: Jitse-Jan
 Summary: Following the steps from the [etcdocs.org](http://ethdocs.org/en/latest/network/test-networks.html), I try to set up a private blockchain to perform my first -fake- transaction.

@@ -2,7 +2,7 @@ Title: Scraping data with Scrapy and PostgreSQL
 Date: 2021-01-05 22:00
 Modified: 2021-01-05 22:00
 Category: posts
-Tags: Python, postgres, PostgreSQL, SQLAlchemy, Scrapy, web crawling
+Tags: Python, PostgreSQL, SQLAlchemy, Scrapy, web crawling
 Slug: scraping-with-scrapy-and-postgres
 Authors: Jitse-Jan
 Summary: To continue the experiment with PostgreSQL I made a simple crawler that retrieves data with Scrapy and stores the data in the PostgreSQL database.

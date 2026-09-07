@@ -2,7 +2,7 @@ Title: Creating a simple REST API with FastAPI and SQLAlchemy
 Date: 2021-02-27 02:27
 Modified: 2021-02-27 02:27
 Category: posts
-Tags: Python, postgres, PostgreSQL, SQLAlchemy, FastAPI, REST, API
+Tags: Python, PostgreSQL, SQLAlchemy, FastAPI, REST, API
 Slug: creating-simple-rest-api-with-fastapi-and-sqlalchemy
 Authors: Jitse-Jan
 Summary: The fourth tutorial in the Postgres related articles is an improvement on the [Flask API](https://www.jitsejan.com/creating-simple-rest-api-with-flask-and-sqlalchemy.html) I made last time. I will be using FastAPI to create the same API, but with the batteries included.
